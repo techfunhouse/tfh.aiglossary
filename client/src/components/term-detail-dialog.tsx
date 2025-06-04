@@ -11,6 +11,7 @@ interface TermDetailDialogProps {
   term: Term | null;
   onEdit: (term: Term) => void;
   onDelete: (term: Term) => void;
+  isPublicView?: boolean;
 }
 
 const categoryColors: Record<string, string> = {
@@ -28,7 +29,7 @@ const categoryColors: Record<string, string> = {
   "Applied AI Domains": "bg-emerald-50 text-emerald-700 border-emerald-200",
 };
 
-export function TermDetailDialog({ open, onClose, term, onEdit, onDelete }: TermDetailDialogProps) {
+export function TermDetailDialog({ open, onClose, term, onEdit, onDelete, isPublicView = false }: TermDetailDialogProps) {
   if (!term) return null;
 
   const handleEdit = () => {
@@ -140,28 +141,30 @@ export function TermDetailDialog({ open, onClose, term, onEdit, onDelete }: Term
           )}
         </div>
 
-        <div className="flex justify-between items-center pt-6 border-t border-secondary-200 bg-secondary-50 -mx-6 -mb-6 px-6 py-6 rounded-b-lg">
-          <div className="text-sm text-secondary-600">
-            Last updated: {new Date().toLocaleDateString()}
+{!isPublicView && (
+          <div className="flex justify-between items-center pt-6 border-t border-secondary-200 bg-secondary-50 -mx-6 -mb-6 px-6 py-6 rounded-b-lg">
+            <div className="text-sm text-secondary-600">
+              Last updated: {new Date().toLocaleDateString()}
+            </div>
+            <div className="flex space-x-3">
+              <Button
+                onClick={handleEdit}
+                className="px-4 py-2 text-primary-600 bg-primary-50 border border-primary-200 rounded-lg hover:bg-primary-100 transition-colors font-medium"
+              >
+                <Edit className="w-4 h-4 mr-2" />
+                Edit Term
+              </Button>
+              <Button
+                onClick={handleDelete}
+                variant="outline"
+                className="px-4 py-2 text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 transition-colors font-medium"
+              >
+                <Trash2 className="w-4 h-4 mr-2" />
+                Delete Term
+              </Button>
+            </div>
           </div>
-          <div className="flex space-x-3">
-            <Button
-              onClick={handleEdit}
-              className="px-4 py-2 text-primary-600 bg-primary-50 border border-primary-200 rounded-lg hover:bg-primary-100 transition-colors font-medium"
-            >
-              <Edit className="w-4 h-4 mr-2" />
-              Edit Term
-            </Button>
-            <Button
-              onClick={handleDelete}
-              variant="outline"
-              className="px-4 py-2 text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 transition-colors font-medium"
-            >
-              <Trash2 className="w-4 h-4 mr-2" />
-              Delete Term
-            </Button>
-          </div>
-        </div>
+        )}
       </DialogContent>
     </Dialog>
   );

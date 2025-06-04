@@ -2,42 +2,210 @@
   {
     "term": "Artificial Intelligence",
     "category": "AI Fundamentals",
-    "aliases": [
-      "AI"
-    ],
-    "definition": "Artificial Intelligence is the branch of computer science focused on building systems that can perform tasks typically requiring human intelligence, such as reasoning, learning, and decision-making.",
+    "aliases": ["AI"],
+    "definition": "A branch of computer science focused on creating systems that can perform tasks typically requiring human intelligence, such as reasoning, learning, decision-making, and problem-solving.",
     "related": [
+      "Machine Learning",
       "Artificial General Intelligence",
-      "Machine Learning"
+      "Narrow AI",
+      "Computer Science",
+      "Cognitive Computing"
     ],
-    "tags": [
-      "core-concept",
-      "ai"
-    ],
+    "tags": ["#core-concept", "#ai", "#computer-science"],
     "references": [
       "https://en.wikipedia.org/wiki/Artificial_intelligence",
-      "https://plato.stanford.edu/entries/artificial-intelligence/"
+      "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/",
+      "https://www.coursera.org/resources/ai-terms"
     ]
   },
   {
-    "term": "Artificial General Intelligence",
-    "category": "AI Fundamentals",
-    "aliases": [
-      "AGI",
-      "Strong AI"
-    ],
-    "definition": "AGI refers to a form of AI that has the ability to understand, learn, and apply knowledge across a wide range of tasks at human or superhuman levels.",
+    "term": "Machine Learning",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["ML"],
+    "definition": "A subset of artificial intelligence that enables computers to learn and improve their performance from data without being explicitly programmed for every task.",
     "related": [
-      "Narrow AI",
-      "Artificial Intelligence"
+      "Artificial Intelligence",
+      "Deep Learning",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Training Data"
     ],
-    "tags": [
-      "agi",
-      "theoretical-ai"
-    ],
+    "tags": ["#machine-learning", "#algorithms", "#data-driven"],
     "references": [
-      "https://en.wikipedia.org/wiki/Artificial_general_intelligence",
-      "https://www.ibm.com/cloud/blog/artificial-general-intelligence"
+      "https://en.wikipedia.org/wiki/Machine_learning",
+      "https://www.coursera.org/resources/ai-terms",
+      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/"
+    ]
+  },
+  {
+    "term": "Deep Learning",
+    "category": "Deep Learning Architectures",
+    "aliases": ["DL"],
+    "definition": "A subset of machine learning that uses neural networks with multiple layers (deep neural networks) to learn complex patterns in large amounts of data.",
+    "related": [
+      "Neural Networks",
+      "Machine Learning",
+      "Artificial Neural Networks",
+      "Backpropagation",
+      "Convolutional Neural Networks"
+    ],
+    "tags": ["#deep-learning", "#neural-networks", "#pattern-recognition"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Deep_learning",
+      "https://www.coursera.org/resources/ai-terms",
+      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+    ]
+  },
+  {
+    "term": "Natural Language Processing",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["NLP"],
+    "definition": "A field of AI that focuses on enabling computers to understand, interpret, and generate human language in a way that is both meaningful and useful.",
+    "related": [
+      "Language Models",
+      "Text Processing",
+      "Speech Recognition",
+      "Machine Translation",
+      "Sentiment Analysis"
+    ],
+    "tags": ["#nlp", "#language", "#text-processing"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Natural_language_processing",
+      "https://sunscrapers.com/blog/the-basics-of-artificial-intelligence-understanding-the-key-concepts-and-terminology/",
+      "https://www.coursera.org/resources/ai-terms"
+    ]
+  },
+  {
+    "term": "Generative AI",
+    "category": "Generative AI",
+    "aliases": ["GenAI"],
+    "definition": "A branch of artificial intelligence that focuses on creating models capable of generating new content such as text, images, audio, or code that resembles human-created content.",
+    "related": [
+      "Large Language Models",
+      "Generative Adversarial Networks",
+      "Diffusion Models",
+      "Content Generation",
+      "Creative AI"
+    ],
+    "tags": ["#generative-ai", "#content-creation", "#creative-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571",
+      "https://www.coursera.org/resources/ai-terms"
+    ]
+  },
+  {
+    "term": "Computer Vision",
+    "category": "Applied AI Domains",
+    "aliases": ["CV", "Machine Vision"],
+    "definition": "A field of artificial intelligence that enables computers to interpret and understand visual information from images and videos, performing tasks like object recognition and scene analysis.",
+    "related": [
+      "Convolutional Neural Networks",
+      "Image Recognition",
+      "Deep Learning",
+      "Pattern Recognition",
+      "Object Detection"
+    ],
+    "tags": ["#computer-vision", "#image-processing", "#visual-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Computer_vision",
+      "https://plat.ai/blog/exploring-core-ai-concepts/",
+      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+    ]
+  },
+  {
+    "term": "Neural Networks",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Artificial Neural Networks", "ANN"],
+    "definition": "Computing systems inspired by biological neural networks, consisting of interconnected nodes that process information through weighted connections and activation functions.",
+    "related": [
+      "Deep Learning",
+      "Perceptron",
+      "Backpropagation",
+      "Activation Functions",
+      "Weight Optimization"
+    ],
+    "tags": ["#neural-networks", "#bio-inspired", "#connectionist"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Artificial_neural_network",
+      "https://www.coursera.org/resources/ai-terms",
+      "https://www.linkedin.com/pulse/10-core-concepts-artificial-intelligence-consultants-factory"
+    ]
+  },
+  {
+    "term": "Large Language Model",
+    "category": "Generative AI",
+    "aliases": ["LLM"],
+    "definition": "A type of neural network model trained on vast amounts of text data to understand and generate human-like language for various natural language processing tasks.",
+    "related": [
+      "Transformer",
+      "Natural Language Processing",
+      "Generative AI",
+      "Text Generation",
+      "Language Understanding"
+    ],
+    "tags": ["#llm", "#language-model", "#text-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Large_language_model",
+      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571",
+      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/"
+    ]
+  },
+  {
+    "term": "Supervised Learning",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Supervised ML"],
+    "definition": "A machine learning approach where algorithms learn from labeled training data, with input-output pairs provided to enable accurate predictions on new, unlabeled data.",
+    "related": [
+      "Machine Learning",
+      "Training Data",
+      "Classification",
+      "Regression",
+      "Labeled Data"
+    ],
+    "tags": ["#supervised-learning", "#labeled-data", "#prediction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Supervised_learning",
+      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/",
+      "https://www.freshconsulting.com/insights/blog/artificial-intelligence-101-the-key-concepts-of-ai/"
+    ]
+  },
+  {
+    "term": "Unsupervised Learning",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Unsupervised ML"],
+    "definition": "A machine learning approach where algorithms find patterns and relationships in data without labeled examples, discovering hidden structures in unlabeled datasets.",
+    "related": [
+      "Machine Learning",
+      "Clustering",
+      "Dimensionality Reduction",
+      "Anomaly Detection",
+      "Pattern Recognition"
+    ],
+    "tags": ["#unsupervised-learning", "#pattern-discovery", "#clustering"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Unsupervised_learning",
+      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/",
+      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+    ]
+  },
+  {
+    "term": "Training Data",
+    "category": "Data Engineering for AI",
+    "aliases": ["Training Set", "Training Dataset"],
+    "definition": "The collection of examples used to teach machine learning models during the training process, providing the foundation for learning patterns and making predictions.",
+    "related": [
+      "Machine Learning",
+      "Data Preprocessing",
+      "Validation Data",
+      "Test Data",
+      "Data Quality"
+    ],
+    "tags": ["#training-data", "#data-engineering", "#ml-pipeline"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets",
+      "https://www.coursera.org/resources/ai-terms",
+      "https://sunscrapers.com/blog/the-basics-of-artificial-intelligence-understanding-the-key-concepts-and-terminology/"
     ]
   }
 ]

@@ -68,6 +68,10 @@ export function Dashboard() {
     setIsDetailDialogOpen(true);
   };
 
+  const handleNavigateToTerm = (term: Term) => {
+    setSelectedTerm(term);
+  };
+
   const handleCloseAddEditDialog = () => {
     setIsAddEditDialogOpen(false);
     setEditingTerm(null);
@@ -116,6 +120,8 @@ export function Dashboard() {
         term={selectedTerm}
         onEdit={handleEditTerm}
         onDelete={handleDeleteTerm}
+        allTerms={terms}
+        onNavigateToTerm={handleNavigateToTerm}
       />
     </div>
   );

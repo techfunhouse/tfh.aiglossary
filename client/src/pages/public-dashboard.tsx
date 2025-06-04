@@ -31,6 +31,10 @@ export function PublicDashboard() {
     setIsDetailDialogOpen(true);
   };
 
+  const handleNavigateToTerm = (term: Term) => {
+    setSelectedTerm(term);
+  };
+
   const handleCloseDetailDialog = () => {
     setIsDetailDialogOpen(false);
     setSelectedTerm(null);
@@ -66,6 +70,8 @@ export function PublicDashboard() {
         onEdit={() => {}} // No edit functionality in public view
         onDelete={() => {}} // No delete functionality in public view
         isPublicView={true}
+        allTerms={terms}
+        onNavigateToTerm={handleNavigateToTerm}
       />
     </div>
   );

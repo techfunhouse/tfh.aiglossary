@@ -29,11 +29,20 @@ export function PublicTermCard({ term, onView }: PublicTermCardProps) {
   };
 
   const categoryColorClass = categoryColors[term.category] || "bg-secondary-50 text-secondary-700 border-secondary-200";
+  
+  // Create category CSS class name from category string
+  const getCategoryClassName = (category: string) => {
+    return `category-${category.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-')}`;
+  };
 
   return (
     <div
       onClick={handleCardClick}
-      className="bg-white rounded-xl shadow-material p-6 hover:shadow-material-lg transition-shadow cursor-pointer border border-secondary-100"
+      className={cn(
+        "bg-white rounded-xl shadow-material p-6 cursor-pointer border border-secondary-100",
+        "card-hover animate-slide-in",
+        getCategoryClassName(term.category)
+      )}
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">

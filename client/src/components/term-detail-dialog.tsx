@@ -114,7 +114,7 @@ export function TermDetailDialog({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl h-[90vh] flex flex-col p-0 overflow-hidden">
+      <DialogContent className="max-w-4xl h-[90vh] flex flex-col p-0 overflow-hidden glass-morphism border-2 border-white/20">
         {/* Fixed Header */}
         <DialogHeader className="flex-shrink-0 p-6 pb-4 border-b border-secondary-200">
           <div className="flex items-start justify-between">
@@ -165,7 +165,7 @@ export function TermDetailDialog({
           
           <div 
             ref={scrollContainerRef}
-            className="h-full overflow-y-auto px-6 py-4"
+            className="h-full overflow-y-auto px-6 py-4 custom-scrollbar"
             onScroll={checkScrollability}
           >
             <div className="space-y-6">

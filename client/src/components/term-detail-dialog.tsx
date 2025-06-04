@@ -257,12 +257,12 @@ export function TermDetailDialog({
               disabled={!previousTerm}
               variant="outline"
               size="sm"
-              className="px-3 py-2 text-secondary-700 border border-secondary-200 rounded-lg hover:bg-secondary-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-2 text-white border-none rounded-lg btn-primary-gradient disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronLeft className="w-4 h-4 mr-1" />
               Previous
             </Button>
-            <span className="text-sm text-secondary-600">
+            <span className="text-sm text-secondary-600 bg-white/50 px-3 py-1 rounded-full">
               {currentIndex + 1} of {sortedTerms.length}
             </span>
             <Button
@@ -270,7 +270,7 @@ export function TermDetailDialog({
               disabled={!nextTerm}
               variant="outline"
               size="sm"
-              className="px-3 py-2 text-secondary-700 border border-secondary-200 rounded-lg hover:bg-secondary-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-2 text-white border-none rounded-lg btn-primary-gradient disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Next
               <ChevronRight className="w-4 h-4 ml-1" />

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Glossary Term",
+  "type": "object",
+  "required": ["term", "category", "definition"],
+  "properties": {
+    "term": {
+      "type": "string",
+      "description": "Canonical name of the glossary term"
+    },
+    "category": {
+      "type": "string",
+      "description": "Singular category from the predefined list"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternate names or abbreviations"
+    },
+    "definition": {
+      "type": "string",
+      "description": "Plain-language explanation of the term"
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Other glossary terms that are conceptually linked"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+        },
+      "description": "Hashtag-style cross-cutting tags"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "External URLs with more context or technical references"
+    }
+  },
+  "additionalProperties": false
+}
+

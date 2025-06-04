@@ -94,7 +94,7 @@ export function TermCard({ term, onEdit, onDelete, onView }: TermCardProps) {
               variant="secondary"
               className="text-xs px-2 py-1 bg-secondary-100 text-secondary-600 rounded-full"
             >
-              #{tag}
+              {tag}
             </Badge>
           ))}
         </div>

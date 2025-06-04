@@ -132,7 +132,7 @@ export function TermDetailDialog({
                     variant="secondary"
                     className="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm"
                   >
-                    #{tag}
+                    {tag}
                   </Badge>
                 ))}
               </div>

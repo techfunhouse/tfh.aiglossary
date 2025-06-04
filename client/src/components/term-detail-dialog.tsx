@@ -1,8 +1,9 @@
+import { useState, useEffect, useRef } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Term } from "@/types";
-import { Edit, Trash2, ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Edit, Trash2, ExternalLink, X, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TermDetailDialogProps {
@@ -41,6 +42,10 @@ export function TermDetailDialog({
   allTerms = [],
   onNavigateToTerm
 }: TermDetailDialogProps) {
+  const [canScrollUp, setCanScrollUp] = useState(false);
+  const [canScrollDown, setCanScrollDown] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   if (!term) return null;
 
   const handleEdit = () => {
@@ -78,12 +83,40 @@ export function TermDetailDialog({
     }
   };
 
+  const checkScrollability = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      setCanScrollUp(scrollTop > 0);
+      setCanScrollDown(scrollTop + clientHeight < scrollHeight - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScrollability);
+      return () => container.removeEventListener('scroll', checkScrollability);
+    }
+  }, [term]);
+
+  useEffect(() => {
+    // Reset scroll position when term changes
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+    // Check scrollability after content loads
+    setTimeout(checkScrollability, 100);
+  }, [term]);
+
   const categoryColorClass = categoryColors[term.category] || "bg-secondary-50 text-secondary-700 border-secondary-200";
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
+      <DialogContent className="max-w-4xl h-[90vh] flex flex-col p-0 overflow-hidden">
+        {/* Fixed Header */}
+        <DialogHeader className="flex-shrink-0 p-6 pb-4 border-b border-secondary-200">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-2">
@@ -116,86 +149,107 @@ export function TermDetailDialog({
           </div>
         </DialogHeader>
 
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold text-secondary-900 mb-3">Definition</h3>
-            <p className="text-secondary-700 leading-relaxed">{term.definition}</p>
+        {/* Scrollable Content Area */}
+        <div className="flex-1 relative overflow-hidden">
+          {/* Scroll Indicators */}
+          {canScrollUp && (
+            <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white to-transparent z-10 flex items-center justify-center">
+              <ChevronUp className="w-4 h-4 text-secondary-400 animate-bounce" />
+            </div>
+          )}
+          {canScrollDown && (
+            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent z-10 flex items-center justify-center">
+              <ChevronDown className="w-4 h-4 text-secondary-400 animate-bounce" />
+            </div>
+          )}
+          
+          <div 
+            ref={scrollContainerRef}
+            className="h-full overflow-y-auto px-6 py-4"
+            onScroll={checkScrollability}
+          >
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-secondary-900 mb-3">Definition</h3>
+                <p className="text-secondary-700 leading-relaxed">{term.definition}</p>
+              </div>
+
+              {term.tags && term.tags.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-secondary-900 mb-3">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {term.tags.map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        className="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {term.related && term.related.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-secondary-900 mb-3">Related Terms</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {term.related.map((relatedTerm) => {
+                      const relatedTermExists = allTerms.find(t => t.term === relatedTerm);
+                      return (
+                        <div
+                          key={relatedTerm}
+                          onClick={() => handleRelatedTermClick(relatedTerm)}
+                          className={cn(
+                            "p-4 rounded-lg border transition-colors",
+                            relatedTermExists
+                              ? "bg-primary-50 border-primary-200 hover:bg-primary-100 cursor-pointer"
+                              : "bg-secondary-50 border-secondary-200 cursor-default"
+                          )}
+                        >
+                          <h4 className={cn(
+                            "font-medium mb-1",
+                            relatedTermExists ? "text-primary-900" : "text-secondary-900"
+                          )}>
+                            {relatedTerm}
+                            {relatedTermExists && <ExternalLink className="w-3 h-3 inline ml-2" />}
+                          </h4>
+                          <p className="text-sm text-secondary-600">
+                            {relatedTermExists ? "Click to view" : "Related Term"}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {term.references && term.references.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-secondary-900 mb-3">References</h3>
+                  <div className="space-y-2">
+                    {term.references.map((reference, index) => (
+                      <a
+                        key={index}
+                        href={reference}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 text-sm"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>{reference}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-
-          {term.tags && term.tags.length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-3">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {term.tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="secondary"
-                    className="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {term.related && term.related.length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-3">Related Terms</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {term.related.map((relatedTerm) => {
-                  const relatedTermExists = allTerms.find(t => t.term === relatedTerm);
-                  return (
-                    <div
-                      key={relatedTerm}
-                      onClick={() => handleRelatedTermClick(relatedTerm)}
-                      className={cn(
-                        "p-4 rounded-lg border transition-colors",
-                        relatedTermExists
-                          ? "bg-primary-50 border-primary-200 hover:bg-primary-100 cursor-pointer"
-                          : "bg-secondary-50 border-secondary-200 cursor-default"
-                      )}
-                    >
-                      <h4 className={cn(
-                        "font-medium mb-1",
-                        relatedTermExists ? "text-primary-900" : "text-secondary-900"
-                      )}>
-                        {relatedTerm}
-                        {relatedTermExists && <ExternalLink className="w-3 h-3 inline ml-2" />}
-                      </h4>
-                      <p className="text-sm text-secondary-600">
-                        {relatedTermExists ? "Click to view" : "Related Term"}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {term.references && term.references.length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-3">References</h3>
-              <div className="space-y-2">
-                {term.references.map((reference, index) => (
-                  <a
-                    key={index}
-                    href={reference}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>{reference}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* Navigation and Action Bar */}
-        <div className="flex justify-between items-center pt-6 border-t border-secondary-200 bg-secondary-50 -mx-6 -mb-6 px-6 py-6 rounded-b-lg">
+        {/* Fixed Navigation Bar */}
+        <div className="flex-shrink-0 flex justify-between items-center pt-4 pb-6 px-6 border-t border-secondary-200 bg-secondary-50">
           {/* Navigation Controls */}
           <div className="flex items-center space-x-3">
             <Button

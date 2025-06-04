@@ -149,7 +149,14 @@ export class MemStorage implements IStorage {
 
   async createTerm(insertTerm: InsertTerm): Promise<Term> {
     const id = this.currentTermId++;
-    const term: Term = { ...insertTerm, id };
+    const term: Term = { 
+      ...insertTerm, 
+      id,
+      aliases: insertTerm.aliases || null,
+      related: insertTerm.related || null,
+      tags: insertTerm.tags || null,
+      references: insertTerm.references || null
+    };
     this.terms.set(id, term);
     return term;
   }

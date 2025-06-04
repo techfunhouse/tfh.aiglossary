@@ -65,6 +65,7 @@ export function PublicDashboard() {
         term={selectedTerm}
         onEdit={() => {}} // No edit functionality in public view
         onDelete={() => {}} // No delete functionality in public view
+        isPublicView={true}
       />
     </div>
   );

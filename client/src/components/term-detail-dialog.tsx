@@ -46,6 +46,33 @@ export function TermDetailDialog({
   const [canScrollDown, setCanScrollDown] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+  const checkScrollability = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      setCanScrollUp(scrollTop > 0);
+      setCanScrollDown(scrollTop + clientHeight < scrollHeight - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScrollability();
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScrollability);
+      return () => container.removeEventListener('scroll', checkScrollability);
+    }
+  }, [term]);
+
+  useEffect(() => {
+    // Reset scroll position when term changes
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+    // Check scrollability after content loads
+    setTimeout(checkScrollability, 100);
+  }, [term]);
+
   if (!term) return null;
 
   const handleEdit = () => {
@@ -82,33 +109,6 @@ export function TermDetailDialog({
       onNavigateToTerm(nextTerm);
     }
   };
-
-  const checkScrollability = () => {
-    const container = scrollContainerRef.current;
-    if (container) {
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      setCanScrollUp(scrollTop > 0);
-      setCanScrollDown(scrollTop + clientHeight < scrollHeight - 1);
-    }
-  };
-
-  useEffect(() => {
-    checkScrollability();
-    const container = scrollContainerRef.current;
-    if (container) {
-      container.addEventListener('scroll', checkScrollability);
-      return () => container.removeEventListener('scroll', checkScrollability);
-    }
-  }, [term]);
-
-  useEffect(() => {
-    // Reset scroll position when term changes
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTop = 0;
-    }
-    // Check scrollability after content loads
-    setTimeout(checkScrollability, 100);
-  }, [term]);
 
   const categoryColorClass = categoryColors[term.category] || "bg-secondary-50 text-secondary-700 border-secondary-200";
 

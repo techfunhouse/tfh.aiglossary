@@ -3,209 +3,2150 @@
     "term": "Artificial Intelligence",
     "category": "AI Fundamentals",
     "aliases": ["AI"],
-    "definition": "A branch of computer science focused on creating systems that can perform tasks typically requiring human intelligence, such as reasoning, learning, decision-making, and problem-solving.",
-    "related": [
-      "Machine Learning",
-      "Artificial General Intelligence",
-      "Narrow AI",
-      "Computer Science",
-      "Cognitive Computing"
-    ],
-    "tags": ["#core-concept", "#ai", "#computer-science"],
+    "definition": "Artificial Intelligence is the branch of computer science focused on building systems that can perform tasks typically requiring human intelligence, such as reasoning, learning, and decision-making.",
+    "related": ["Artificial General Intelligence", "Machine Learning", "Narrow AI"],
+    "tags": ["core-concept", "ai"],
     "references": [
       "https://en.wikipedia.org/wiki/Artificial_intelligence",
-      "https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/",
-      "https://www.coursera.org/resources/ai-terms"
+      "https://plato.stanford.edu/entries/artificial-intelligence/"
+    ]
+  },
+  {
+    "term": "Artificial General Intelligence",
+    "category": "AI Fundamentals",
+    "aliases": ["AGI", "Strong AI"],
+    "definition": "AGI refers to a form of AI that has the ability to understand, learn, and apply knowledge across a wide range of tasks at human or superhuman levels.",
+    "related": ["Narrow AI", "Artificial Intelligence", "Superintelligence"],
+    "tags": ["agi", "theoretical-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Artificial_general_intelligence",
+      "https://www.ibm.com/cloud/blog/artificial-general-intelligence"
+    ]
+  },
+  {
+    "term": "Narrow AI",
+    "category": "AI Fundamentals",
+    "aliases": ["Weak AI", "Applied AI"],
+    "definition": "AI systems designed to perform specific tasks or solve particular problems, unlike AGI which aims for general intelligence across all domains.",
+    "related": ["Artificial General Intelligence", "Artificial Intelligence", "Task-Specific AI"],
+    "tags": ["narrow-ai", "specialized-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Weak_AI",
+      "https://www.ibm.com/cloud/blog/narrow-ai-vs-general-ai"
     ]
   },
   {
     "term": "Machine Learning",
-    "category": "Machine Learning Algorithms",
+    "category": "AI Fundamentals",
     "aliases": ["ML"],
-    "definition": "A subset of artificial intelligence that enables computers to learn and improve their performance from data without being explicitly programmed for every task.",
-    "related": [
-      "Artificial Intelligence",
-      "Deep Learning",
-      "Supervised Learning",
-      "Unsupervised Learning",
-      "Training Data"
-    ],
-    "tags": ["#machine-learning", "#algorithms", "#data-driven"],
+    "definition": "A subset of AI that enables systems to automatically learn and improve from experience without being explicitly programmed for every task.",
+    "related": ["Artificial Intelligence", "Deep Learning", "Supervised Learning"],
+    "tags": ["machine-learning", "core-concept"],
     "references": [
       "https://en.wikipedia.org/wiki/Machine_learning",
-      "https://www.coursera.org/resources/ai-terms",
-      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/"
+      "https://www.ibm.com/cloud/learn/machine-learning"
     ]
   },
   {
     "term": "Deep Learning",
-    "category": "Deep Learning Architectures",
+    "category": "AI Fundamentals",
     "aliases": ["DL"],
-    "definition": "A subset of machine learning that uses neural networks with multiple layers (deep neural networks) to learn complex patterns in large amounts of data.",
-    "related": [
-      "Neural Networks",
-      "Machine Learning",
-      "Artificial Neural Networks",
-      "Backpropagation",
-      "Convolutional Neural Networks"
-    ],
-    "tags": ["#deep-learning", "#neural-networks", "#pattern-recognition"],
+    "definition": "A subset of machine learning that uses neural networks with multiple layers to model and understand complex patterns in data.",
+    "related": ["Machine Learning", "Neural Networks", "Artificial Neural Networks"],
+    "tags": ["deep-learning", "neural-networks"],
     "references": [
       "https://en.wikipedia.org/wiki/Deep_learning",
-      "https://www.coursera.org/resources/ai-terms",
-      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+      "https://www.deeplearningbook.org/"
     ]
   },
   {
-    "term": "Natural Language Processing",
-    "category": "Natural Language Processing (NLP)",
-    "aliases": ["NLP"],
-    "definition": "A field of AI that focuses on enabling computers to understand, interpret, and generate human language in a way that is both meaningful and useful.",
-    "related": [
-      "Language Models",
-      "Text Processing",
-      "Speech Recognition",
-      "Machine Translation",
-      "Sentiment Analysis"
-    ],
-    "tags": ["#nlp", "#language", "#text-processing"],
+    "term": "Algorithm",
+    "category": "AI Fundamentals",
+    "aliases": ["Algo"],
+    "definition": "A set of rules or instructions designed to solve a specific problem or perform a particular task, forming the foundation of all AI systems.",
+    "related": ["Heuristic", "Optimization", "Machine Learning"],
+    "tags": ["algorithm", "fundamental"],
     "references": [
-      "https://en.wikipedia.org/wiki/Natural_language_processing",
-      "https://sunscrapers.com/blog/the-basics-of-artificial-intelligence-understanding-the-key-concepts-and-terminology/",
-      "https://www.coursera.org/resources/ai-terms"
+      "https://en.wikipedia.org/wiki/Algorithm",
+      "https://www.khanacademy.org/computing/computer-science/algorithms"
     ]
   },
   {
-    "term": "Generative AI",
-    "category": "Generative AI",
-    "aliases": ["GenAI"],
-    "definition": "A branch of artificial intelligence that focuses on creating models capable of generating new content such as text, images, audio, or code that resembles human-created content.",
-    "related": [
-      "Large Language Models",
-      "Generative Adversarial Networks",
-      "Diffusion Models",
-      "Content Generation",
-      "Creative AI"
-    ],
-    "tags": ["#generative-ai", "#content-creation", "#creative-ai"],
+    "term": "Heuristic",
+    "category": "AI Fundamentals",
+    "aliases": ["Rule of Thumb"],
+    "definition": "A problem-solving approach that uses practical methods or shortcuts to find solutions that are good enough, though not necessarily optimal.",
+    "related": ["Algorithm", "Optimization", "Search Algorithms"],
+    "tags": ["heuristic", "problem-solving"],
     "references": [
-      "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
-      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571",
-      "https://www.coursera.org/resources/ai-terms"
+      "https://en.wikipedia.org/wiki/Heuristic",
+      "https://plato.stanford.edu/entries/heuristics/"
     ]
   },
   {
-    "term": "Computer Vision",
-    "category": "Applied AI Domains",
-    "aliases": ["CV", "Machine Vision"],
-    "definition": "A field of artificial intelligence that enables computers to interpret and understand visual information from images and videos, performing tasks like object recognition and scene analysis.",
-    "related": [
-      "Convolutional Neural Networks",
-      "Image Recognition",
-      "Deep Learning",
-      "Pattern Recognition",
-      "Object Detection"
-    ],
-    "tags": ["#computer-vision", "#image-processing", "#visual-ai"],
+    "term": "Turing Test",
+    "category": "AI Fundamentals",
+    "aliases": ["Imitation Game"],
+    "definition": "A test proposed by Alan Turing to determine whether a machine can exhibit intelligent behavior equivalent to or indistinguishable from human intelligence.",
+    "related": ["Alan Turing", "Intelligence", "Chatbot"],
+    "tags": ["turing-test", "ai-evaluation"],
     "references": [
-      "https://en.wikipedia.org/wiki/Computer_vision",
-      "https://plat.ai/blog/exploring-core-ai-concepts/",
-      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+      "https://en.wikipedia.org/wiki/Turing_test",
+      "https://plato.stanford.edu/entries/turing-test/"
     ]
   },
   {
-    "term": "Neural Networks",
-    "category": "Deep Learning Architectures",
-    "aliases": ["Artificial Neural Networks", "ANN"],
-    "definition": "Computing systems inspired by biological neural networks, consisting of interconnected nodes that process information through weighted connections and activation functions.",
-    "related": [
-      "Deep Learning",
-      "Perceptron",
-      "Backpropagation",
-      "Activation Functions",
-      "Weight Optimization"
-    ],
-    "tags": ["#neural-networks", "#bio-inspired", "#connectionist"],
+    "term": "Expert System",
+    "category": "AI Fundamentals",
+    "aliases": ["Knowledge-Based System"],
+    "definition": "An AI system that emulates the decision-making ability of a human expert by using a knowledge base of facts and rules about a specific domain.",
+    "related": ["Knowledge Base", "Rule-Based System", "Inference Engine"],
+    "tags": ["expert-system", "knowledge-based"],
     "references": [
-      "https://en.wikipedia.org/wiki/Artificial_neural_network",
-      "https://www.coursera.org/resources/ai-terms",
-      "https://www.linkedin.com/pulse/10-core-concepts-artificial-intelligence-consultants-factory"
+      "https://en.wikipedia.org/wiki/Expert_system",
+      "https://www.britannica.com/technology/expert-system"
     ]
   },
   {
-    "term": "Large Language Model",
-    "category": "Generative AI",
-    "aliases": ["LLM"],
-    "definition": "A type of neural network model trained on vast amounts of text data to understand and generate human-like language for various natural language processing tasks.",
-    "related": [
-      "Transformer",
-      "Natural Language Processing",
-      "Generative AI",
-      "Text Generation",
-      "Language Understanding"
-    ],
-    "tags": ["#llm", "#language-model", "#text-generation"],
+    "term": "Knowledge Base",
+    "category": "AI Fundamentals",
+    "aliases": ["KB"],
+    "definition": "A structured repository of information, facts, and rules that an AI system uses to make decisions and solve problems.",
+    "related": ["Expert System", "Knowledge Graph", "Ontology"],
+    "tags": ["knowledge-base", "data-structure"],
     "references": [
-      "https://en.wikipedia.org/wiki/Large_language_model",
-      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571",
-      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/"
+      "https://en.wikipedia.org/wiki/Knowledge_base",
+      "https://www.ibm.com/cloud/learn/knowledge-base"
+    ]
+  },
+  {
+    "term": "Inference Engine",
+    "category": "AI Fundamentals",
+    "aliases": ["Reasoning Engine"],
+    "definition": "The component of an AI system that applies logical rules to a knowledge base to derive new information or make decisions.",
+    "related": ["Expert System", "Knowledge Base", "Logical Reasoning"],
+    "tags": ["inference", "reasoning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Inference_engine",
+      "https://www.britannica.com/technology/inference-engine"
+    ]
+  },
+  {
+    "term": "Symbolic AI",
+    "category": "AI Fundamentals",
+    "aliases": ["GOFAI", "Good Old-Fashioned AI"],
+    "definition": "An approach to AI that uses symbols and logical rules to represent knowledge and reasoning, as opposed to learning from data.",
+    "related": ["Expert System", "Rule-Based System", "Connectionist AI"],
+    "tags": ["symbolic-ai", "classical-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence",
+      "https://plato.stanford.edu/entries/artificial-intelligence/#SymbVersConn"
+    ]
+  },
+  {
+    "term": "Connectionist AI",
+    "category": "AI Fundamentals",
+    "aliases": ["Neural AI", "Sub-symbolic AI"],
+    "definition": "An approach to AI that models intelligence using networks of simple, interconnected processing units, inspired by biological neural networks.",
+    "related": ["Neural Networks", "Symbolic AI", "Deep Learning"],
+    "tags": ["connectionist", "neural-approach"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Connectionism",
+      "https://plato.stanford.edu/entries/connectionism/"
     ]
   },
   {
     "term": "Supervised Learning",
     "category": "Machine Learning Algorithms",
     "aliases": ["Supervised ML"],
-    "definition": "A machine learning approach where algorithms learn from labeled training data, with input-output pairs provided to enable accurate predictions on new, unlabeled data.",
-    "related": [
-      "Machine Learning",
-      "Training Data",
-      "Classification",
-      "Regression",
-      "Labeled Data"
-    ],
-    "tags": ["#supervised-learning", "#labeled-data", "#prediction"],
+    "definition": "A machine learning approach where models learn from labeled training data to make predictions on new, unseen data.",
+    "related": ["Unsupervised Learning", "Classification", "Regression"],
+    "tags": ["supervised-learning", "training-data"],
     "references": [
       "https://en.wikipedia.org/wiki/Supervised_learning",
-      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/",
-      "https://www.freshconsulting.com/insights/blog/artificial-intelligence-101-the-key-concepts-of-ai/"
+      "https://www.ibm.com/cloud/learn/supervised-learning"
     ]
   },
   {
     "term": "Unsupervised Learning",
     "category": "Machine Learning Algorithms",
     "aliases": ["Unsupervised ML"],
-    "definition": "A machine learning approach where algorithms find patterns and relationships in data without labeled examples, discovering hidden structures in unlabeled datasets.",
-    "related": [
-      "Machine Learning",
-      "Clustering",
-      "Dimensionality Reduction",
-      "Anomaly Detection",
-      "Pattern Recognition"
-    ],
-    "tags": ["#unsupervised-learning", "#pattern-discovery", "#clustering"],
+    "definition": "A machine learning approach that finds hidden patterns in data without labeled examples, often used for clustering and dimensionality reduction.",
+    "related": ["Supervised Learning", "Clustering", "Dimensionality Reduction"],
+    "tags": ["unsupervised-learning", "pattern-discovery"],
     "references": [
       "https://en.wikipedia.org/wiki/Unsupervised_learning",
-      "https://www.geeksforgeeks.org/what-is-artificial-intelligence-ai/",
-      "https://guides.library.sc.edu/c.php?g=1353979&p=10019571"
+      "https://www.ibm.com/cloud/learn/unsupervised-learning"
+    ]
+  },
+  {
+    "term": "Semi-Supervised Learning",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Semi-Supervised ML"],
+    "definition": "A machine learning approach that combines small amounts of labeled data with large amounts of unlabeled data during training.",
+    "related": ["Supervised Learning", "Unsupervised Learning", "Active Learning"],
+    "tags": ["semi-supervised", "hybrid-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Semi-supervised_learning",
+      "https://www.ibm.com/cloud/learn/semi-supervised-learning"
+    ]
+  },
+  {
+    "term": "Reinforcement Learning",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["RL"],
+    "definition": "A machine learning paradigm where an agent learns to make decisions by taking actions in an environment and receiving rewards or penalties.",
+    "related": ["Q-Learning", "Policy Gradient", "Markov Decision Process"],
+    "tags": ["reinforcement-learning", "agent-based"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Reinforcement_learning",
+      "https://www.deepmind.com/learning-resources/introduction-to-reinforcement-learning"
+    ]
+  },
+  {
+    "term": "Classification",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Classification Task"],
+    "definition": "A supervised learning task where the goal is to predict discrete categories or classes for input data.",
+    "related": ["Regression", "Supervised Learning", "Decision Tree"],
+    "tags": ["classification", "prediction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Statistical_classification",
+      "https://scikit-learn.org/stable/supervised_learning.html#supervised-learning"
+    ]
+  },
+  {
+    "term": "Regression",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Regression Analysis"],
+    "definition": "A supervised learning task where the goal is to predict continuous numerical values based on input features.",
+    "related": ["Classification", "Linear Regression", "Polynomial Regression"],
+    "tags": ["regression", "continuous-prediction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Regression_analysis",
+      "https://scikit-learn.org/stable/supervised_learning.html#supervised-learning"
+    ]
+  },
+  {
+    "term": "Clustering",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Cluster Analysis"],
+    "definition": "An unsupervised learning technique that groups similar data points together based on their features or characteristics.",
+    "related": ["K-Means", "Hierarchical Clustering", "Unsupervised Learning"],
+    "tags": ["clustering", "grouping"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Cluster_analysis",
+      "https://scikit-learn.org/stable/modules/clustering.html"
+    ]
+  },
+  {
+    "term": "Decision Tree",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Decision Tree Algorithm"],
+    "definition": "A tree-like model that makes decisions by splitting data based on feature values, creating a hierarchical set of if-else conditions.",
+    "related": ["Random Forest", "Classification", "Ensemble Methods"],
+    "tags": ["decision-tree", "interpretable"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Decision_tree",
+      "https://scikit-learn.org/stable/modules/tree.html"
+    ]
+  },
+  {
+    "term": "Random Forest",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["RF"],
+    "definition": "An ensemble method that combines multiple decision trees to improve prediction accuracy and reduce overfitting.",
+    "related": ["Decision Tree", "Ensemble Methods", "Bagging"],
+    "tags": ["random-forest", "ensemble"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Random_forest",
+      "https://scikit-learn.org/stable/modules/ensemble.html#forest"
+    ]
+  },
+  {
+    "term": "Support Vector Machine",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["SVM"],
+    "definition": "A supervised learning algorithm that finds the optimal boundary (hyperplane) to separate different classes in the data.",
+    "related": ["Kernel Method", "Classification", "Margin"],
+    "tags": ["svm", "kernel-method"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Support_vector_machine",
+      "https://scikit-learn.org/stable/modules/svm.html"
+    ]
+  },
+  {
+    "term": "Linear Regression",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Linear Model"],
+    "definition": "A statistical method that models the relationship between a dependent variable and independent variables using a linear equation.",
+    "related": ["Regression", "Ordinary Least Squares", "Polynomial Regression"],
+    "tags": ["linear-regression", "statistical-model"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Linear_regression",
+      "https://scikit-learn.org/stable/modules/linear_model.html"
+    ]
+  },
+  {
+    "term": "Logistic Regression",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Logit Model"],
+    "definition": "A statistical method used for binary classification that uses the logistic function to model the probability of class membership.",
+    "related": ["Classification", "Sigmoid Function", "Linear Regression"],
+    "tags": ["logistic-regression", "binary-classification"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Logistic_regression",
+      "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression"
+    ]
+  },
+  {
+    "term": "K-Means Clustering",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["K-Means", "K-Means Algorithm"],
+    "definition": "An unsupervised learning algorithm that partitions data into k clusters by minimizing the within-cluster sum of squares.",
+    "related": ["Clustering", "Centroid", "Elbow Method"],
+    "tags": ["k-means", "centroid-based"],
+    "references": [
+      "https://en.wikipedia.org/wiki/K-means_clustering",
+      "https://scikit-learn.org/stable/modules/clustering.html#k-means"
+    ]
+  },
+  {
+    "term": "Naive Bayes",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Naive Bayes Classifier"],
+    "definition": "A probabilistic classifier based on Bayes' theorem with the assumption of independence between features.",
+    "related": ["Bayes Theorem", "Classification", "Probabilistic Model"],
+    "tags": ["naive-bayes", "probabilistic"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Naive_Bayes_classifier",
+      "https://scikit-learn.org/stable/modules/naive_bayes.html"
+    ]
+  },
+  {
+    "term": "Neural Network",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Artificial Neural Network", "ANN"],
+    "definition": "A computing system inspired by biological neural networks, consisting of interconnected nodes (neurons) that process information.",
+    "related": ["Deep Learning", "Perceptron", "Backpropagation"],
+    "tags": ["neural-network", "connectionist"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Artificial_neural_network",
+      "https://www.ibm.com/cloud/learn/neural-networks"
+    ]
+  },
+  {
+    "term": "Perceptron",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Single-Layer Perceptron"],
+    "definition": "The simplest form of neural network, consisting of a single layer of weights that can learn to classify linearly separable patterns.",
+    "related": ["Neural Network", "Linear Classifier", "Multilayer Perceptron"],
+    "tags": ["perceptron", "linear-classifier"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Perceptron",
+      "https://scikit-learn.org/stable/modules/linear_model.html#perceptron"
+    ]
+  },
+  {
+    "term": "Ensemble Methods",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Ensemble Learning"],
+    "definition": "Techniques that combine multiple learning algorithms to improve predictive performance compared to individual models.",
+    "related": ["Random Forest", "Boosting", "Bagging"],
+    "tags": ["ensemble", "model-combination"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Ensemble_learning",
+      "https://scikit-learn.org/stable/modules/ensemble.html"
+    ]
+  },
+  {
+    "term": "Bagging",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Bootstrap Aggregating"],
+    "definition": "An ensemble method that trains multiple models on different subsets of the training data and averages their predictions.",
+    "related": ["Ensemble Methods", "Bootstrap Sampling", "Random Forest"],
+    "tags": ["bagging", "variance-reduction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Bootstrap_aggregating",
+      "https://scikit-learn.org/stable/modules/ensemble.html#bagging"
+    ]
+  },
+  {
+    "term": "Boosting",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Adaptive Boosting"],
+    "definition": "An ensemble method that sequentially trains weak learners, with each subsequent model focusing on the errors of previous models.",
+    "related": ["AdaBoost", "Gradient Boosting", "Ensemble Methods"],
+    "tags": ["boosting", "sequential-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Boosting_(machine_learning)",
+      "https://scikit-learn.org/stable/modules/ensemble.html#boosting"
+    ]
+  },
+  {
+    "term": "Cross-Validation",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["CV", "Cross Validation"],
+    "definition": "A technique for assessing model performance by dividing data into multiple folds and training/testing on different combinations.",
+    "related": ["Model Validation", "K-Fold", "Training Set"],
+    "tags": ["cross-validation", "model-evaluation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Cross-validation_(statistics)",
+      "https://scikit-learn.org/stable/modules/cross_validation.html"
+    ]
+  },
+  {
+    "term": "Feature Selection",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Variable Selection"],
+    "definition": "The process of selecting a subset of relevant features from the original feature set to improve model performance and reduce complexity.",
+    "related": ["Feature Engineering", "Dimensionality Reduction", "Curse of Dimensionality"],
+    "tags": ["feature-selection", "preprocessing"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Feature_selection",
+      "https://scikit-learn.org/stable/modules/feature_selection.html"
+    ]
+  },
+  {
+    "term": "Principal Component Analysis",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["PCA"],
+    "definition": "A dimensionality reduction technique that transforms data to a lower-dimensional space while preserving the most important variance.",
+    "related": ["Dimensionality Reduction", "Feature Selection", "Eigenvalues"],
+    "tags": ["pca", "dimensionality-reduction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Principal_component_analysis",
+      "https://scikit-learn.org/stable/modules/decomposition.html#pca"
+    ]
+  },
+  {
+    "term": "Gradient Descent",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["GD"],
+    "definition": "An optimization algorithm that iteratively adjusts model parameters in the direction of steepest descent to minimize a loss function.",
+    "related": ["Optimization", "Backpropagation", "Stochastic Gradient Descent"],
+    "tags": ["gradient-descent", "optimization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Gradient_descent",
+      "https://www.deeplearningbook.org/contents/numerical.html"
+    ]
+  },
+  {
+    "term": "Stochastic Gradient Descent",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["SGD"],
+    "definition": "A variant of gradient descent that updates parameters using the gradient computed from a single training example or small batch.",
+    "related": ["Gradient Descent", "Mini-Batch", "Optimization"],
+    "tags": ["sgd", "stochastic-optimization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Stochastic_gradient_descent",
+      "https://scikit-learn.org/stable/modules/sgd.html"
+    ]
+  },
+  {
+    "term": "Hyperparameter",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Hyperparameter Setting"],
+    "definition": "Configuration settings that are set before training begins and control the learning process, such as learning rate or number of layers.",
+    "related": ["Hyperparameter Tuning", "Model Parameters", "Grid Search"],
+    "tags": ["hyperparameter", "model-configuration"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)",
+      "https://scikit-learn.org/stable/modules/grid_search.html"
+    ]
+  },
+  {
+    "term": "Overfitting",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Overtraining"],
+    "definition": "A modeling error where a model learns the training data too well, including noise, resulting in poor performance on new data.",
+    "related": ["Underfitting", "Bias-Variance Tradeoff", "Regularization"],
+    "tags": ["overfitting", "generalization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Overfitting",
+      "https://www.ibm.com/cloud/learn/overfitting"
+    ]
+  },
+  {
+    "term": "Underfitting",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["High Bias"],
+    "definition": "A modeling error where a model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and test data.",
+    "related": ["Overfitting", "Bias-Variance Tradeoff", "Model Complexity"],
+    "tags": ["underfitting", "bias"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Overfitting",
+      "https://www.ibm.com/cloud/learn/underfitting"
+    ]
+  },
+  {
+    "term": "Bias-Variance Tradeoff",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Bias-Variance Dilemma"],
+    "definition": "The fundamental tension in machine learning between a model's ability to minimize bias (error from overly simplistic assumptions) and variance (error from sensitivity to small fluctuations).",
+    "related": ["Overfitting", "Underfitting", "Model Complexity"],
+    "tags": ["bias-variance", "model-selection"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff",
+      "https://www.ibm.com/cloud/learn/bias-variance-tradeoff"
+    ]
+  },
+  {
+    "term": "Regularization",
+    "category": "Machine Learning Algorithms",
+    "aliases": ["Regularization Technique"],
+    "definition": "Techniques used to prevent overfitting by adding a penalty term to the loss function that discourages overly complex models.",
+    "related": ["L1 Regularization", "L2 Regularization", "Overfitting"],
+    "tags": ["regularization", "overfitting-prevention"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Regularization_(mathematics)",
+      "https://www.ibm.com/cloud/learn/regularization"
+    ]
+  },
+  {
+    "term": "Convolutional Neural Network",
+    "category": "Deep Learning Architectures",
+    "aliases": ["CNN", "ConvNet"],
+    "definition": "A deep learning architecture particularly effective for processing grid-like data such as images, using convolutional layers to detect local features through learnable filters.",
+    "related": ["Neural Network", "Deep Learning", "Computer Vision", "Image Recognition"],
+    "tags": ["cnn", "computer-vision", "neural-architecture"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+      "https://cs231n.github.io/convolutional-networks/"
+    ]
+  },
+  {
+    "term": "Recurrent Neural Network",
+    "category": "Deep Learning Architectures",
+    "aliases": ["RNN"],
+    "definition": "A neural network architecture designed for sequential data, where connections between nodes form cycles allowing information to persist and be passed from one step to the next.",
+    "related": ["Neural Network", "LSTM", "Natural Language Processing", "Sequential Data"],
+    "tags": ["rnn", "sequential-data", "temporal-modeling"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Recurrent_neural_network",
+      "https://www.deeplearningbook.org/contents/rnn.html"
+    ]
+  },
+  {
+    "term": "Long Short-Term Memory",
+    "category": "Deep Learning Architectures",
+    "aliases": ["LSTM"],
+    "definition": "A type of recurrent neural network architecture designed to overcome the vanishing gradient problem, capable of learning long-term dependencies in sequential data.",
+    "related": ["Recurrent Neural Network", "Gated Recurrent Unit", "Vanishing Gradient", "Sequential Data"],
+    "tags": ["lstm", "memory-network", "sequence-modeling"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Long_short-term_memory",
+      "https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+    ]
+  },
+  {
+    "term": "Transformer",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Transformer Architecture", "Attention-based Model"],
+    "definition": "A neural network architecture that relies entirely on attention mechanisms to draw global dependencies between input and output, revolutionizing natural language processing.",
+    "related": ["Attention Mechanism", "BERT", "GPT", "Natural Language Processing"],
+    "tags": ["transformer", "attention", "nlp-architecture"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)",
+      "https://arxiv.org/abs/1706.03762"
+    ]
+  },
+  {
+    "term": "Attention Mechanism",
+    "category": "Deep Learning Architectures", 
+    "aliases": ["Attention", "Self-Attention"],
+    "definition": "A technique that allows neural networks to focus on relevant parts of the input when producing each part of the output, improving performance on sequence-to-sequence tasks.",
+    "related": ["Transformer", "Sequence-to-Sequence", "Neural Machine Translation", "BERT"],
+    "tags": ["attention", "focus-mechanism", "sequence-modeling"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Attention_(machine_learning)",
+      "https://arxiv.org/abs/1409.0473"
+    ]
+  },
+  {
+    "term": "Autoencoder",
+    "category": "Deep Learning Architectures",
+    "aliases": ["AE"],
+    "definition": "A neural network trained to copy its input to its output, typically used for dimensionality reduction, feature learning, or data compression through a bottleneck hidden layer.",
+    "related": ["Dimensionality Reduction", "Feature Learning", "Variational Autoencoder", "Unsupervised Learning"],
+    "tags": ["autoencoder", "representation-learning", "compression"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Autoencoder",
+      "https://www.deeplearningbook.org/contents/autoencoders.html"
+    ]
+  },
+  {
+    "term": "Generative Adversarial Network",
+    "category": "Deep Learning Architectures",
+    "aliases": ["GAN"],
+    "definition": "A framework where two neural networks compete: a generator creates fake data while a discriminator tries to distinguish real from fake, improving both networks through adversarial training.",
+    "related": ["Generator", "Discriminator", "Generative Model", "Adversarial Training"],
+    "tags": ["gan", "generative-model", "adversarial-training"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Generative_adversarial_network",
+      "https://arxiv.org/abs/1406.2661"
+    ]
+  },
+  {
+    "term": "Feedforward Neural Network",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Multilayer Perceptron", "MLP", "Dense Network"],
+    "definition": "A neural network where information flows in one direction from input to output layers, without cycles or loops, forming the foundation of most deep learning architectures.",
+    "related": ["Neural Network", "Perceptron", "Deep Learning", "Backpropagation"],
+    "tags": ["feedforward", "mlp", "basic-architecture"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Feedforward_neural_network",
+      "https://www.deeplearningbook.org/contents/mlp.html"
+    ]
+  },
+  {
+    "term": "Residual Network",
+    "category": "Deep Learning Architectures",
+    "aliases": ["ResNet", "Skip Connection Network"],
+    "definition": "A deep neural network architecture that uses skip connections to allow gradients to flow directly to earlier layers, enabling training of very deep networks.",
+    "related": ["Skip Connection", "Deep Learning", "Vanishing Gradient", "Computer Vision"],
+    "tags": ["resnet", "skip-connections", "deep-networks"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Residual_neural_network",
+      "https://arxiv.org/abs/1512.03385"
+    ]
+  },
+  {
+    "term": "Backpropagation",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Backprop", "Error Backpropagation"],
+    "definition": "The fundamental algorithm for training neural networks by computing gradients of the loss function with respect to network weights using the chain rule of calculus.",
+    "related": ["Gradient Descent", "Neural Network", "Chain Rule", "Weight Update"],
+    "tags": ["backpropagation", "training-algorithm", "optimization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Backpropagation",
+      "https://www.deeplearningbook.org/contents/mlp.html"
+    ]
+  },
+  {
+    "term": "Batch Normalization",
+    "category": "Deep Learning Architectures",
+    "aliases": ["BatchNorm", "BN"],
+    "definition": "A technique that normalizes inputs to each layer in a neural network, reducing internal covariate shift and allowing higher learning rates and more stable training.",
+    "related": ["Normalization", "Training Stability", "Deep Learning", "Regularization"],
+    "tags": ["batch-normalization", "training-technique", "stability"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Batch_normalization",
+      "https://arxiv.org/abs/1502.03167"
+    ]
+  },
+  {
+    "term": "Dropout",
+    "category": "Deep Learning Architectures", 
+    "aliases": ["Dropout Regularization"],
+    "definition": "A regularization technique that randomly sets a fraction of input units to zero during training, preventing overfitting and improving generalization in neural networks.",
+    "related": ["Regularization", "Overfitting", "Neural Network", "Generalization"],
+    "tags": ["dropout", "regularization", "overfitting-prevention"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Dropout_(neural_networks)",
+      "https://arxiv.org/abs/1207.0580"
+    ]
+  },
+  {
+    "term": "Activation Function",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Nonlinearity", "Transfer Function"],
+    "definition": "A mathematical function applied to a neuron's output that introduces non-linearity into the network, enabling it to learn complex patterns beyond linear relationships.",
+    "related": ["ReLU", "Sigmoid", "Tanh", "Neural Network"],
+    "tags": ["activation-function", "nonlinearity", "neural-components"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Activation_function",
+      "https://www.deeplearningbook.org/contents/mlp.html"
+    ]
+  },
+  {
+    "term": "ReLU",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Rectified Linear Unit", "Rectifier"],
+    "definition": "An activation function that outputs the input directly if positive, otherwise zero, widely used in deep learning due to its simplicity and effectiveness at mitigating vanishing gradients.",
+    "related": ["Activation Function", "Vanishing Gradient", "Deep Learning", "Leaky ReLU"],
+    "tags": ["relu", "activation-function", "gradient-flow"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Rectifier_(neural_networks)",
+      "https://www.deeplearningbook.org/contents/mlp.html"
+    ]
+  },
+  {
+    "term": "Loss Function",
+    "category": "Deep Learning Architectures",
+    "aliases": ["Objective Function", "Cost Function", "Error Function"],
+    "definition": "A function that measures the difference between predicted and actual values, providing a signal for the learning algorithm to minimize during training.",
+    "related": ["Mean Squared Error", "Cross-Entropy", "Optimization", "Gradient Descent"],
+    "tags": ["loss-function", "optimization", "training-objective"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Loss_function",
+      "https://www.deeplearningbook.org/contents/ml.html"
+    ]
+  },
+  {
+    "term": "Natural Language Processing",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["NLP"],
+    "definition": "A branch of artificial intelligence that focuses on the interaction between computers and human language, enabling machines to understand, interpret, and generate human language in a valuable way.",
+    "related": ["Text Mining", "Computational Linguistics", "Machine Translation", "Sentiment Analysis"],
+    "tags": ["nlp", "language-processing", "text-analysis"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Natural_language_processing",
+      "https://www.ibm.com/cloud/learn/natural-language-processing"
+    ]
+  },
+  {
+    "term": "Tokenization", 
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Text Tokenization"],
+    "definition": "The process of breaking down text into smaller units called tokens, typically words, subwords, or characters, which serve as the basic building blocks for further NLP analysis.",
+    "related": ["Text Preprocessing", "Word Segmentation", "Subword Tokenization", "BERT"],
+    "tags": ["tokenization", "text-preprocessing", "text-segmentation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization",
+      "https://huggingface.co/docs/transformers/tokenizer_summary"
+    ]
+  },
+  {
+    "term": "Named Entity Recognition",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["NER", "Entity Extraction"],
+    "definition": "A subtask of information extraction that identifies and classifies named entities (such as persons, organizations, locations, dates) in unstructured text into predefined categories.",
+    "related": ["Information Extraction", "Part-of-Speech Tagging", "Text Classification", "spaCy"],
+    "tags": ["ner", "entity-extraction", "information-extraction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Named-entity_recognition",
+      "https://spacy.io/usage/linguistic-features#named-entities"
+    ]
+  },
+  {
+    "term": "Part-of-Speech Tagging",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["POS Tagging", "Grammatical Tagging"],
+    "definition": "The process of assigning grammatical categories (such as noun, verb, adjective) to each word in a text, providing syntactic information for further language analysis.",
+    "related": ["Morphological Analysis", "Syntactic Parsing", "Named Entity Recognition", "Linguistic Features"],
+    "tags": ["pos-tagging", "grammatical-analysis", "syntax"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Part-of-speech_tagging",
+      "https://www.nltk.org/book/ch05.html"
+    ]
+  },
+  {
+    "term": "Sentiment Analysis",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Opinion Mining", "Emotion AI"],
+    "definition": "The use of NLP to systematically identify, extract, and quantify subjective information and emotions expressed in text, typically classifying sentiment as positive, negative, or neutral.",
+    "related": ["Text Classification", "Opinion Mining", "Emotion Detection", "Social Media Analysis"],
+    "tags": ["sentiment-analysis", "opinion-mining", "emotion-detection"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Sentiment_analysis",
+      "https://monkeylearn.com/sentiment-analysis/"
+    ]
+  },
+  {
+    "term": "Machine Translation",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["MT", "Automatic Translation"],
+    "definition": "The task of automatically translating text or speech from one natural language to another using computational methods, often employing neural network approaches.",
+    "related": ["Neural Machine Translation", "Sequence-to-Sequence", "Transformer", "BLEU Score"],
+    "tags": ["machine-translation", "language-translation", "seq2seq"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Machine_translation",
+      "https://developers.google.com/translate"
+    ]
+  },
+  {
+    "term": "Word Embedding",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Word Vectors", "Distributed Representation"],
+    "definition": "Dense vector representations of words in a continuous vector space where semantically similar words are mapped to nearby points, enabling mathematical operations on word meanings.",
+    "related": ["Word2Vec", "GloVe", "FastText", "Semantic Similarity"],
+    "tags": ["word-embeddings", "vector-representation", "semantic-modeling"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Word_embedding",
+      "https://www.tensorflow.org/tutorials/text/word_embeddings"
+    ]
+  },
+  {
+    "term": "BERT",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Bidirectional Encoder Representations from Transformers"],
+    "definition": "A pre-trained transformer model that reads text bidirectionally and can be fine-tuned for various NLP tasks, achieving state-of-the-art performance on many language understanding benchmarks.",
+    "related": ["Transformer", "Pre-trained Models", "Fine-tuning", "Language Model"],
+    "tags": ["bert", "transformer-model", "pre-trained-model"],
+    "references": [
+      "https://en.wikipedia.org/wiki/BERT_(language_model)",
+      "https://arxiv.org/abs/1810.04805"
+    ]
+  },
+  {
+    "term": "Language Model",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["LM", "Statistical Language Model"],
+    "definition": "A probabilistic model that assigns probabilities to sequences of words, enabling prediction of the next word in a sequence and serving as the foundation for many NLP applications.",
+    "related": ["N-gram Model", "Neural Language Model", "GPT", "Perplexity"],
+    "tags": ["language-model", "probability-distribution", "text-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Language_model",
+      "https://web.stanford.edu/~jurafsky/slp3/3.pdf"
+    ]
+  },
+  {
+    "term": "Text Classification",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Document Classification", "Text Categorization"],
+    "definition": "The task of automatically assigning predefined categories or labels to text documents based on their content, using machine learning algorithms trained on labeled examples.",
+    "related": ["Sentiment Analysis", "Spam Detection", "Topic Classification", "Feature Extraction"],
+    "tags": ["text-classification", "document-categorization", "supervised-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Document_classification",
+      "https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html"
+    ]
+  },
+  {
+    "term": "Question Answering",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["QA", "Reading Comprehension"],
+    "definition": "An NLP task where systems automatically answer questions posed in natural language, often by extracting or generating answers from a given text passage or knowledge base.",
+    "related": ["Reading Comprehension", "Information Retrieval", "SQuAD", "BERT"],
+    "tags": ["question-answering", "reading-comprehension", "information-extraction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Question_answering",
+      "https://rajpurkar.github.io/SQuAD-explorer/"
+    ]
+  },
+  {
+    "term": "Text Summarization",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Automatic Summarization", "Document Summarization"],
+    "definition": "The process of automatically creating a shorter version of a text document that retains the most important information and main ideas from the original content.",
+    "related": ["Extractive Summarization", "Abstractive Summarization", "Information Extraction", "Sequence-to-Sequence"],
+    "tags": ["text-summarization", "information-compression", "content-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Automatic_summarization",
+      "https://huggingface.co/tasks/summarization"
+    ]
+  },
+  {
+    "term": "N-gram",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["N-gram Model"],
+    "definition": "A contiguous sequence of n items (typically words or characters) from a text, used in statistical language modeling to predict the probability of word sequences.",
+    "related": ["Language Model", "Bigram", "Trigram", "Markov Model"],
+    "tags": ["n-gram", "sequence-modeling", "statistical-model"],
+    "references": [
+      "https://en.wikipedia.org/wiki/N-gram",
+      "https://web.stanford.edu/~jurafsky/slp3/3.pdf"
+    ]
+  },
+  {
+    "term": "TF-IDF",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Term Frequency-Inverse Document Frequency"],
+    "definition": "A numerical statistic that reflects how important a word is to a document within a collection of documents, combining term frequency with inverse document frequency to weight word importance.",
+    "related": ["Information Retrieval", "Text Mining", "Feature Extraction", "Document Similarity"],
+    "tags": ["tf-idf", "text-mining", "feature-weighting"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Tf%E2%80%93idf",
+      "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting"
+    ]
+  },
+  {
+    "term": "Coreference Resolution",
+    "category": "Natural Language Processing (NLP)",
+    "aliases": ["Anaphora Resolution"],
+    "definition": "The task of determining which words or phrases in a text refer to the same real-world entity, such as resolving pronouns to their antecedents or linking different mentions of the same person.",
+    "related": ["Discourse Analysis", "Entity Linking", "Pronoun Resolution", "Text Understanding"],
+    "tags": ["coreference-resolution", "entity-linking", "discourse-analysis"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Coreference",
+      "https://spacy.io/universe/project/neuralcoref"
+    ]
+  },
+  {
+    "term": "Generative AI",
+    "category": "Generative AI",
+    "aliases": ["GenAI", "Generative Artificial Intelligence"],
+    "definition": "AI systems that can create new content, including text, images, audio, video, or code, by learning patterns from training data and generating novel outputs that resemble the training examples.",
+    "related": ["Large Language Model", "Diffusion Model", "Generative Adversarial Network", "Content Generation"],
+    "tags": ["generative-ai", "content-creation", "ai-creativity"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+      "https://www.ibm.com/topics/generative-ai"
+    ]
+  },
+  {
+    "term": "Large Language Model",
+    "category": "Generative AI",
+    "aliases": ["LLM"],
+    "definition": "A type of neural network model trained on vast amounts of text data that can understand and generate human-like text, capable of performing various language tasks through prompting.",
+    "related": ["Transformer", "GPT", "BERT", "Foundation Model"],
+    "tags": ["llm", "language-generation", "foundation-model"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Large_language_model",
+      "https://www.anthropic.com/news/introducing-claude"
+    ]
+  },
+  {
+    "term": "GPT",
+    "category": "Generative AI",
+    "aliases": ["Generative Pre-trained Transformer"],
+    "definition": "A family of autoregressive language models based on the transformer architecture, trained to predict the next token in a sequence, enabling various text generation and completion tasks.",
+    "related": ["Transformer", "Large Language Model", "Autoregressive Model", "OpenAI"],
+    "tags": ["gpt", "autoregressive", "text-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/GPT-4",
+      "https://openai.com/research/gpt-4"
+    ]
+  },
+  {
+    "term": "Prompt Engineering",
+    "category": "Generative AI",
+    "aliases": ["Prompt Design", "Prompt Crafting"],
+    "definition": "The practice of designing and optimizing input prompts to effectively communicate with and guide the behavior of large language models to produce desired outputs.",
+    "related": ["Few-shot Learning", "In-context Learning", "Chain-of-Thought", "Large Language Model"],
+    "tags": ["prompt-engineering", "llm-interaction", "instruction-design"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Prompt_engineering",
+      "https://www.promptingguide.ai/"
+    ]
+  },
+  {
+    "term": "Diffusion Model",
+    "category": "Generative AI",
+    "aliases": ["Denoising Diffusion Model"],
+    "definition": "A class of generative models that learn to generate data by gradually denoising random noise, widely used for high-quality image and video generation.",
+    "related": ["Stable Diffusion", "DALL-E", "Image Generation", "Denoising"],
+    "tags": ["diffusion-model", "image-generation", "denoising"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Diffusion_model",
+      "https://arxiv.org/abs/2006.11239"
+    ]
+  },
+  {
+    "term": "Foundation Model",
+    "category": "Generative AI",
+    "aliases": ["Base Model", "Pre-trained Foundation Model"],
+    "definition": "Large-scale models trained on broad data that can be adapted to a wide range of downstream tasks, serving as the foundation for many AI applications through fine-tuning or prompting.",
+    "related": ["Large Language Model", "Transfer Learning", "Pre-training", "Fine-tuning"],
+    "tags": ["foundation-model", "pre-training", "transfer-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Foundation_model",
+      "https://crfm.stanford.edu/report.html"
+    ]
+  },
+  {
+    "term": "Fine-tuning",
+    "category": "Generative AI",
+    "aliases": ["Model Fine-tuning", "Transfer Learning"],
+    "definition": "The process of adapting a pre-trained model to a specific task or domain by continuing training on task-specific data, often with lower learning rates.",
+    "related": ["Transfer Learning", "Foundation Model", "Domain Adaptation", "PEFT"],
+    "tags": ["fine-tuning", "model-adaptation", "transfer-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)",
+      "https://huggingface.co/docs/transformers/training"
+    ]
+  },
+  {
+    "term": "Text-to-Image Generation",
+    "category": "Generative AI",
+    "aliases": ["T2I", "Image Synthesis from Text"],
+    "definition": "AI systems that create images from textual descriptions, using models that understand both language and visual concepts to generate corresponding visual content.",
+    "related": ["DALL-E", "Stable Diffusion", "Midjourney", "Multimodal AI"],
+    "tags": ["text-to-image", "image-synthesis", "multimodal-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Text-to-image_model",
+      "https://stability.ai/stable-diffusion"
+    ]
+  },
+  {
+    "term": "Autoregressive Model",
+    "category": "Generative AI",
+    "aliases": ["AR Model", "Sequential Generation"],
+    "definition": "A type of generative model that produces output sequences one element at a time, where each new element depends on the previously generated elements.",
+    "related": ["GPT", "Language Model", "Sequential Data", "Next Token Prediction"],
+    "tags": ["autoregressive", "sequential-generation", "token-prediction"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Autoregressive_model",
+      "https://www.deeplearningbook.org/contents/rnn.html"
+    ]
+  },
+  {
+    "term": "Zero-shot Learning",
+    "category": "Generative AI",
+    "aliases": ["Zero-shot Prompting"],
+    "definition": "The ability of a model to perform tasks or understand concepts without having been explicitly trained on those specific tasks, relying on general knowledge from pre-training.",
+    "related": ["Few-shot Learning", "In-context Learning", "Prompt Engineering", "Generalization"],
+    "tags": ["zero-shot", "generalization", "task-transfer"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Zero-shot_learning",
+      "https://arxiv.org/abs/2109.01652"
+    ]
+  },
+  {
+    "term": "Few-shot Learning",
+    "category": "Generative AI",
+    "aliases": ["Few-shot Prompting", "In-context Learning"],
+    "definition": "The ability to learn and perform new tasks with only a few examples provided in the input prompt, without updating the model's parameters.",
+    "related": ["Zero-shot Learning", "In-context Learning", "Prompt Engineering", "Meta-learning"],
+    "tags": ["few-shot", "in-context-learning", "example-based-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Few-shot_learning",
+      "https://arxiv.org/abs/2005.14165"
+    ]
+  },
+  {
+    "term": "Hallucination",
+    "category": "Generative AI",
+    "aliases": ["AI Hallucination", "Model Hallucination"],
+    "definition": "When AI models generate content that appears plausible but is factually incorrect, fabricated, or not grounded in the training data, often occurring in language models and image generators.",
+    "related": ["Factual Accuracy", "Model Reliability", "Grounding", "Content Verification"],
+    "tags": ["hallucination", "model-reliability", "factual-accuracy"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+      "https://www.anthropic.com/news/reducing-hallucinations"
+    ]
+  },
+  {
+    "term": "Chain-of-Thought",
+    "category": "Generative AI",
+    "aliases": ["CoT", "Reasoning Chain"],
+    "definition": "A prompting technique that encourages language models to break down complex problems into step-by-step reasoning processes, improving performance on tasks requiring logical thinking.",
+    "related": ["Prompt Engineering", "Reasoning", "Problem Solving", "Step-by-step Thinking"],
+    "tags": ["chain-of-thought", "reasoning", "problem-solving"],
+    "references": [
+      "https://arxiv.org/abs/2201.11903",
+      "https://www.promptingguide.ai/techniques/cot"
+    ]
+  },
+  {
+    "term": "Multimodal AI",
+    "category": "Generative AI",
+    "aliases": ["Multimodal Models", "Cross-modal AI"],
+    "definition": "AI systems that can process and generate content across multiple modalities such as text, images, audio, and video, enabling richer understanding and creation.",
+    "related": ["CLIP", "GPT-4V", "Text-to-Image Generation", "Vision-Language Models"],
+    "tags": ["multimodal", "cross-modal", "vision-language"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Multimodal_learning",
+      "https://openai.com/research/clip"
+    ]
+  },
+  {
+    "term": "Retrieval-Augmented Generation",
+    "category": "Generative AI",
+    "aliases": ["RAG"],
+    "definition": "A technique that combines pre-trained language models with external knowledge retrieval, allowing models to access and incorporate relevant information during generation.",
+    "related": ["Knowledge Retrieval", "Information Retrieval", "Grounding", "External Knowledge"],
+    "tags": ["rag", "knowledge-retrieval", "external-knowledge"],
+    "references": [
+      "https://arxiv.org/abs/2005.11401",
+      "https://huggingface.co/docs/transformers/model_doc/rag"
+    ]
+  },
+  {
+    "term": "AI Agent",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Intelligent Agent", "Autonomous Agent"],
+    "definition": "A system that perceives its environment through sensors and acts upon that environment through actuators to achieve specific goals, operating with varying degrees of autonomy.",
+    "related": ["Multi-Agent System", "Autonomous System", "Goal-Oriented Behavior", "Environment Interaction"],
+    "tags": ["ai-agent", "autonomous-system", "goal-oriented"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Intelligent_agent",
+      "https://www.ibm.com/topics/ai-agents"
+    ]
+  },
+  {
+    "term": "Multi-Agent System",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["MAS", "Agent-Based System"],
+    "definition": "A system composed of multiple interacting autonomous agents that work together to solve problems that are beyond the capabilities of individual agents.",
+    "related": ["AI Agent", "Distributed AI", "Coordination", "Swarm Intelligence"],
+    "tags": ["multi-agent", "distributed-ai", "agent-coordination"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Multi-agent_system",
+      "https://www.sciencedirect.com/topics/computer-science/multi-agent-system"
+    ]
+  },
+  {
+    "term": "Autonomous System",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Autonomous Agent", "Self-Governing System"],
+    "definition": "A system capable of operating independently without direct human control, making decisions and taking actions based on its programming and environmental inputs.",
+    "related": ["AI Agent", "Self-Driving Car", "Robotics", "Decision Making"],
+    "tags": ["autonomous-system", "independence", "self-operation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Autonomous_system_(mathematics)",
+      "https://www.rand.org/topics/autonomous-systems.html"
+    ]
+  },
+  {
+    "term": "Goal-Oriented Agent",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Goal-Based Agent", "Purposive Agent"],
+    "definition": "An agent that selects actions based on how well they help achieve specified goals, considering future consequences of current actions.",
+    "related": ["Planning", "Search Algorithms", "Utility Function", "Decision Theory"],
+    "tags": ["goal-oriented", "planning", "decision-making"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Goal-oriented_agent",
+      "https://www.cs.cmu.edu/afs/cs/academic/class/15381-s07/www/slides/032707agents.pdf"
+    ]
+  },
+  {
+    "term": "Reactive Agent",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Reflex Agent", "Stimulus-Response Agent"],
+    "definition": "An agent that selects actions based solely on current percepts, without considering the history of percepts or planning for future consequences.",
+    "related": ["Simple Reflex Agent", "Condition-Action Rules", "Behavioral AI", "Immediate Response"],
+    "tags": ["reactive-agent", "reflex-behavior", "immediate-response"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Reactive_agent",
+      "https://www.javatpoint.com/agents-in-artificial-intelligence"
+    ]
+  },
+  {
+    "term": "Planning",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["AI Planning", "Automated Planning"],
+    "definition": "The process of finding a sequence of actions that will achieve a goal, involving reasoning about actions, their effects, and the conditions under which they can be executed.",
+    "related": ["Search Algorithms", "STRIPS", "Goal-Oriented Agent", "Action Sequence"],
+    "tags": ["planning", "action-sequence", "goal-achievement"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Automated_planning_and_scheduling",
+      "https://www.cs.cmu.edu/afs/cs/academic/class/15780-s16/www/lectures/planning.pdf"
+    ]
+  },
+  {
+    "term": "Behavior Tree",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["BT", "Behavior Trees"],
+    "definition": "A hierarchical structure used to organize and control agent behavior, providing a clear and modular way to design complex autonomous behaviors through composable nodes.",
+    "related": ["Finite State Machine", "AI Agent", "Game AI", "Robotics"],
+    "tags": ["behavior-tree", "behavior-control", "hierarchical-structure"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control)",
+      "https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work"
+    ]
+  },
+  {
+    "term": "Swarm Intelligence",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Collective Intelligence", "Swarm AI"],
+    "definition": "The collective behavior of decentralized, self-organized systems, typically consisting of many simple agents following basic rules that lead to intelligent global behavior.",
+    "related": ["Multi-Agent System", "Ant Colony Optimization", "Particle Swarm Optimization", "Emergence"],
+    "tags": ["swarm-intelligence", "collective-behavior", "emergence"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Swarm_intelligence",
+      "https://www.nature.com/articles/s41467-020-16811-y"
+    ]
+  },
+  {
+    "term": "Coordination",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Agent Coordination", "Multi-Agent Coordination"],
+    "definition": "The process by which multiple agents organize their activities to achieve individual or collective goals, often involving communication, negotiation, and task allocation.",
+    "related": ["Multi-Agent System", "Distributed AI", "Consensus", "Task Allocation"],
+    "tags": ["coordination", "collaboration", "distributed-control"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Multi-agent_coordination",
+      "https://www.sciencedirect.com/topics/computer-science/agent-coordination"
+    ]
+  },
+  {
+    "term": "Action Selection",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Decision Making", "Action Choice"],
+    "definition": "The process by which an agent chooses which action to perform next from a set of possible actions, based on its current state, goals, and environmental conditions.",
+    "related": ["Decision Theory", "Utility Function", "Policy", "Behavioral Control"],
+    "tags": ["action-selection", "decision-making", "behavior-control"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Action_selection",
+      "https://www.cs.cmu.edu/~./15-381/slides/action-selection.pdf"
+    ]
+  },
+  {
+    "term": "Environment Model",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["World Model", "State Representation"],
+    "definition": "An agent's internal representation of its environment, including objects, their properties, relationships, and dynamics, used for planning and decision-making.",
+    "related": ["State Space", "World Representation", "Planning", "Perception"],
+    "tags": ["environment-model", "world-representation", "state-space"],
+    "references": [
+      "https://en.wikipedia.org/wiki/World_model",
+      "https://arxiv.org/abs/1803.10122"
+    ]
+  },
+  {
+    "term": "Utility Function",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["Reward Function", "Objective Function"],
+    "definition": "A mathematical function that assigns numerical values to different states or outcomes, representing an agent's preferences and guiding its decision-making process.",
+    "related": ["Decision Theory", "Optimization", "Goal-Oriented Agent", "Reinforcement Learning"],
+    "tags": ["utility-function", "preferences", "optimization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Utility",
+      "https://plato.stanford.edu/entries/decision-theory/"
+    ]
+  },
+  {
+    "term": "Distributed AI",
+    "category": "AI Agents & Autonomy",
+    "aliases": ["DAI", "Distributed Artificial Intelligence"],
+    "definition": "A subfield of AI that focuses on systems where intelligence and computation are distributed across multiple agents or components that work together to solve problems.",
+    "related": ["Multi-Agent System", "Parallel Computing", "Coordination", "Decentralized Control"],
+    "tags": ["distributed-ai", "parallel-intelligence", "decentralized"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Distributed_artificial_intelligence",
+      "https://www.sciencedirect.com/topics/computer-science/distributed-artificial-intelligence"
+    ]
+  },
+  {
+    "term": "Knowledge Graph",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["KG", "Semantic Network"],
+    "definition": "A structured representation of knowledge that uses nodes to represent entities and edges to represent relationships, enabling machines to understand and reason about interconnected information.",
+    "related": ["Ontology", "Semantic Web", "Entity Relationship", "Graph Database"],
+    "tags": ["knowledge-graph", "semantic-network", "structured-knowledge"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Knowledge_graph",
+      "https://www.ibm.com/topics/knowledge-graph"
+    ]
+  },
+  {
+    "term": "Information Retrieval",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["IR"],
+    "definition": "The activity of obtaining information system resources that are relevant to an information need from a collection of those resources, typically involving search and ranking algorithms.",
+    "related": ["Search Engine", "Relevance Ranking", "TF-IDF", "Vector Search"],
+    "tags": ["information-retrieval", "search", "relevance"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Information_retrieval",
+      "https://nlp.stanford.edu/IR-book/"
+    ]
+  },
+  {
+    "term": "Vector Database",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Vector Store", "Embedding Database"],
+    "definition": "A specialized database designed to store, index, and query high-dimensional vector embeddings, enabling efficient similarity search and retrieval of semantically related content.",
+    "related": ["Vector Search", "Embedding", "Similarity Search", "Semantic Search"],
+    "tags": ["vector-database", "embedding-storage", "similarity-search"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Vector_database",
+      "https://www.pinecone.io/learn/vector-database/"
+    ]
+  },
+  {
+    "term": "Semantic Search",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Meaning-based Search"],
+    "definition": "A search technique that seeks to improve search accuracy by understanding the intent and contextual meaning of search queries, rather than just matching keywords.",
+    "related": ["Vector Search", "Natural Language Processing", "Embedding", "Contextual Understanding"],
+    "tags": ["semantic-search", "meaning-based", "contextual-search"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Semantic_search",
+      "https://www.elastic.co/what-is/semantic-search"
+    ]
+  },
+  {
+    "term": "Ontology",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Domain Ontology", "Formal Ontology"],
+    "definition": "A formal specification of concepts, relationships, and rules within a specific domain, providing a shared vocabulary and structure for organizing and reasoning about knowledge.",
+    "related": ["Knowledge Graph", "Semantic Web", "Taxonomy", "Schema"],
+    "tags": ["ontology", "formal-specification", "domain-knowledge"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Ontology_(information_science)",
+      "https://www.w3.org/standards/semanticweb/ontology"
+    ]
+  },
+  {
+    "term": "Entity Linking",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Entity Resolution", "Record Linkage"],
+    "definition": "The process of identifying and connecting entity mentions in text to their corresponding entries in a knowledge base, enabling disambiguation and knowledge integration.",
+    "related": ["Named Entity Recognition", "Knowledge Graph", "Disambiguation", "Entity Resolution"],
+    "tags": ["entity-linking", "disambiguation", "knowledge-integration"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Entity_linking",
+      "https://arxiv.org/abs/1909.02288"
+    ]
+  },
+  {
+    "term": "Vector Search",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Similarity Search", "Nearest Neighbor Search"],
+    "definition": "A search method that finds the most similar vectors to a query vector in a high-dimensional space, typically used to retrieve semantically similar content based on embeddings.",
+    "related": ["Vector Database", "Embedding", "Cosine Similarity", "K-Nearest Neighbors"],
+    "tags": ["vector-search", "similarity-search", "nearest-neighbor"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Nearest_neighbor_search",
+      "https://www.pinecone.io/learn/what-is-similarity-search/"
+    ]
+  },
+  {
+    "term": "Knowledge Base",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["KB", "Knowledge Repository"],
+    "definition": "A structured collection of information, facts, and rules about a particular domain, organized to support reasoning, query answering, and knowledge-based applications.",
+    "related": ["Expert System", "Knowledge Graph", "Database", "Information Storage"],
+    "tags": ["knowledge-base", "information-repository", "structured-knowledge"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Knowledge_base",
+      "https://www.ibm.com/cloud/learn/knowledge-base"
+    ]
+  },
+  {
+    "term": "Retrieval-Augmented Generation",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["RAG"],
+    "definition": "A technique that combines information retrieval with text generation, allowing language models to access external knowledge sources to provide more accurate and up-to-date responses.",
+    "related": ["Information Retrieval", "Large Language Model", "External Knowledge", "Grounding"],
+    "tags": ["rag", "retrieval-augmented", "knowledge-grounding"],
+    "references": [
+      "https://arxiv.org/abs/2005.11401",
+      "https://huggingface.co/docs/transformers/model_doc/rag"
+    ]
+  },
+  {
+    "term": "Graph Neural Network",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["GNN"],
+    "definition": "A type of neural network designed to work with graph-structured data, enabling learning and reasoning over relationships between entities in knowledge graphs and networks.",
+    "related": ["Knowledge Graph", "Neural Network", "Graph Learning", "Node Embedding"],
+    "tags": ["gnn", "graph-learning", "relational-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Graph_neural_network",
+      "https://arxiv.org/abs/1901.00596"
+    ]
+  },
+  {
+    "term": "Triple",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["RDF Triple", "Subject-Predicate-Object"],
+    "definition": "A basic unit of knowledge representation consisting of three components: subject, predicate, and object, forming the fundamental building block of knowledge graphs.",
+    "related": ["Knowledge Graph", "RDF", "Semantic Web", "Entity Relationship"],
+    "tags": ["triple", "knowledge-representation", "semantic-structure"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Semantic_triple",
+      "https://www.w3.org/TR/rdf11-concepts/"
+    ]
+  },
+  {
+    "term": "Embedding",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Vector Embedding", "Distributed Representation"],
+    "definition": "Dense vector representations that capture semantic meaning and relationships, enabling mathematical operations and similarity comparisons in high-dimensional spaces.",
+    "related": ["Word Embedding", "Vector Search", "Semantic Similarity", "Representation Learning"],
+    "tags": ["embedding", "vector-representation", "semantic-encoding"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Word_embedding",
+      "https://www.tensorflow.org/guide/embedding"
+    ]
+  },
+  {
+    "term": "Elasticsearch",
+    "category": "Knowledge & Retrieval Systems",
+    "aliases": ["Elastic Search"],
+    "definition": "A distributed, open-source search and analytics engine built on Apache Lucene, commonly used for full-text search, log analytics, and real-time data analysis.",
+    "related": ["Search Engine", "Information Retrieval", "Full-text Search", "Lucene"],
+    "tags": ["elasticsearch", "search-engine", "text-search"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Elasticsearch",
+      "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+    ]
+  },
+  {
+    "term": "Data Pipeline",
+    "category": "Data Engineering for AI",
+    "aliases": ["ETL Pipeline", "Data Workflow"],
+    "definition": "A series of data processing steps that extract, transform, and load data from various sources to destinations, ensuring data is clean, consistent, and ready for AI model training.",
+    "related": ["ETL", "Data Processing", "Data Flow", "Data Integration"],
+    "tags": ["data-pipeline", "etl", "data-workflow"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_pipeline",
+      "https://www.databricks.com/glossary/data-pipeline"
+    ]
+  },
+  {
+    "term": "Feature Engineering",
+    "category": "Data Engineering for AI",
+    "aliases": ["Feature Extraction", "Feature Creation"],
+    "definition": "The process of selecting, modifying, or creating new features from raw data to improve machine learning model performance and interpretability.",
+    "related": ["Feature Selection", "Data Preprocessing", "Domain Knowledge", "Model Performance"],
+    "tags": ["feature-engineering", "feature-creation", "data-transformation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Feature_engineering",
+      "https://www.kaggle.com/learn/feature-engineering"
+    ]
+  },
+  {
+    "term": "Data Labeling",
+    "category": "Data Engineering for AI",
+    "aliases": ["Data Annotation", "Ground Truth Creation"],
+    "definition": "The process of adding meaningful and informative labels to raw data, creating training datasets for supervised machine learning algorithms.",
+    "related": ["Supervised Learning", "Training Data", "Annotation", "Ground Truth"],
+    "tags": ["data-labeling", "annotation", "ground-truth"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Labeled_data",
+      "https://www.labelbox.com/guides/data-labeling/"
+    ]
+  },
+  {
+    "term": "Data Quality",
+    "category": "Data Engineering for AI",
+    "aliases": ["Data Integrity", "Data Reliability"],
+    "definition": "The degree to which data meets requirements for accuracy, completeness, consistency, and reliability, critical for successful AI model training and deployment.",
+    "related": ["Data Validation", "Data Cleaning", "Data Governance", "Model Performance"],
+    "tags": ["data-quality", "data-reliability", "data-validation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_quality",
+      "https://www.ibm.com/topics/data-quality"
+    ]
+  },
+  {
+    "term": "Data Preprocessing",
+    "category": "Data Engineering for AI",
+    "aliases": ["Data Preparation", "Data Cleaning"],
+    "definition": "The process of preparing raw data for machine learning by cleaning, transforming, and organizing it into a suitable format for model training.",
+    "related": ["Data Cleaning", "Normalization", "Feature Engineering", "Missing Value Imputation"],
+    "tags": ["data-preprocessing", "data-preparation", "data-cleaning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_preprocessing",
+      "https://scikit-learn.org/stable/modules/preprocessing.html"
     ]
   },
   {
     "term": "Training Data",
     "category": "Data Engineering for AI",
     "aliases": ["Training Set", "Training Dataset"],
-    "definition": "The collection of examples used to teach machine learning models during the training process, providing the foundation for learning patterns and making predictions.",
-    "related": [
-      "Machine Learning",
-      "Data Preprocessing",
-      "Validation Data",
-      "Test Data",
-      "Data Quality"
-    ],
-    "tags": ["#training-data", "#data-engineering", "#ml-pipeline"],
+    "definition": "A dataset used to train machine learning models, containing input-output pairs that allow the model to learn patterns and relationships.",
+    "related": ["Test Data", "Validation Data", "Supervised Learning", "Dataset Split"],
+    "tags": ["training-data", "dataset", "model-training"],
     "references": [
       "https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets",
-      "https://www.coursera.org/resources/ai-terms",
-      "https://sunscrapers.com/blog/the-basics-of-artificial-intelligence-understanding-the-key-concepts-and-terminology/"
+      "https://www.ibm.com/topics/training-data"
+    ]
+  },
+  {
+    "term": "Data Augmentation",
+    "category": "Data Engineering for AI",
+    "aliases": ["Dataset Augmentation"],
+    "definition": "Techniques to artificially increase the size and diversity of training datasets by creating modified versions of existing data through transformations like rotation, scaling, or noise addition.",
+    "related": ["Training Data", "Generalization", "Overfitting", "Synthetic Data"],
+    "tags": ["data-augmentation", "dataset-expansion", "generalization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_augmentation",
+      "https://www.tensorflow.org/tutorials/images/data_augmentation"
+    ]
+  },
+  {
+    "term": "Feature Store",
+    "category": "Data Engineering for AI",
+    "aliases": ["ML Feature Store"],
+    "definition": "A centralized repository for storing, managing, and serving machine learning features, enabling feature reuse, consistency, and collaboration across ML projects.",
+    "related": ["Feature Engineering", "MLOps", "Data Management", "Feature Reuse"],
+    "tags": ["feature-store", "feature-management", "mlops"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Feature_store",
+      "https://www.tecton.ai/blog/what-is-a-feature-store/"
+    ]
+  },
+  {
+    "term": "Data Versioning",
+    "category": "Data Engineering for AI",
+    "aliases": ["Dataset Versioning", "Data Version Control"],
+    "definition": "The practice of tracking changes to datasets over time, enabling reproducibility, rollback capabilities, and collaboration in machine learning projects.",
+    "related": ["Version Control", "Reproducibility", "Data Management", "MLOps"],
+    "tags": ["data-versioning", "version-control", "reproducibility"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_version_control",
+      "https://dvc.org/doc/use-cases/versioning-data-and-models"
+    ]
+  },
+  {
+    "term": "Synthetic Data",
+    "category": "Data Engineering for AI",
+    "aliases": ["Artificial Data", "Generated Data"],
+    "definition": "Artificially generated data that mimics the statistical properties of real data, used when real data is scarce, expensive, or sensitive for privacy reasons.",
+    "related": ["Data Augmentation", "Privacy", "Generative Model", "Training Data"],
+    "tags": ["synthetic-data", "artificial-data", "data-generation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Synthetic_data",
+      "https://www.ibm.com/topics/synthetic-data"
+    ]
+  },
+  {
+    "term": "Data Lake",
+    "category": "Data Engineering for AI",
+    "aliases": ["Big Data Lake"],
+    "definition": "A centralized repository that stores vast amounts of raw data in its native format, including structured, semi-structured, and unstructured data for analytics and ML.",
+    "related": ["Big Data", "Data Warehouse", "Data Storage", "Analytics"],
+    "tags": ["data-lake", "big-data", "data-storage"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Data_lake",
+      "https://aws.amazon.com/big-data/what-is-a-data-lake/"
+    ]
+  },
+  {
+    "term": "Real-time Data Processing",
+    "category": "Data Engineering for AI",
+    "aliases": ["Stream Processing", "Live Data Processing"],
+    "definition": "The capability to process and analyze data as it arrives, enabling immediate insights and responses for time-sensitive AI applications.",
+    "related": ["Stream Processing", "Event-driven Architecture", "Low Latency", "Apache Kafka"],
+    "tags": ["real-time", "stream-processing", "low-latency"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Stream_processing",
+      "https://kafka.apache.org/documentation/"
+    ]
+  },
+  {
+    "term": "Data Drift",
+    "category": "Data Engineering for AI",
+    "aliases": ["Dataset Shift", "Covariate Shift"],
+    "definition": "Changes in the statistical properties of input data over time, which can degrade machine learning model performance and require model retraining or adaptation.",
+    "related": ["Model Drift", "Concept Drift", "Model Monitoring", "Distribution Shift"],
+    "tags": ["data-drift", "distribution-shift", "model-degradation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Concept_drift",
+      "https://www.evidentlyai.com/blog/machine-learning-monitoring-data-drift"
+    ]
+  },
+  {
+    "term": "MLOps",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Machine Learning Operations", "ML Operations"],
+    "definition": "A set of practices that combines machine learning, DevOps, and data engineering to deploy and maintain ML systems in production reliably and efficiently.",
+    "related": ["DevOps", "CI/CD", "Model Deployment", "Production Systems"],
+    "tags": ["mlops", "operations", "production-ml"],
+    "references": [
+      "https://en.wikipedia.org/wiki/MLOps",
+      "https://www.databricks.com/glossary/mlops"
+    ]
+  },
+  {
+    "term": "Model Deployment",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Model Serving", "Production Deployment"],
+    "definition": "The process of integrating a trained machine learning model into a production environment where it can receive input data and return predictions for real-world use.",
+    "related": ["Model Serving", "Production Environment", "API Endpoint", "Inference"],
+    "tags": ["model-deployment", "production", "model-serving"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_deployment",
+      "https://www.seldon.io/what-is-model-deployment"
+    ]
+  },
+  {
+    "term": "Model Monitoring",
+    "category": "Model Deployment & Operations",
+    "aliases": ["ML Monitoring", "Performance Monitoring"],
+    "definition": "The continuous tracking of machine learning model performance, behavior, and health in production to detect issues like drift, degradation, or failures.",
+    "related": ["Model Drift", "Performance Metrics", "Alerting", "Model Maintenance"],
+    "tags": ["model-monitoring", "performance-tracking", "production-health"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_monitoring",
+      "https://www.evidentlyai.com/blog/ml-monitoring-do-i-need-it"
+    ]
+  },
+  {
+    "term": "A/B Testing",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Split Testing", "Experimental Testing"],
+    "definition": "A method of comparing two versions of a model or system by randomly splitting users into groups and measuring performance differences to make data-driven decisions.",
+    "related": ["Experimental Design", "Statistical Testing", "Model Evaluation", "Champion-Challenger"],
+    "tags": ["ab-testing", "experimentation", "model-comparison"],
+    "references": [
+      "https://en.wikipedia.org/wiki/A/B_testing",
+      "https://www.optimizely.com/optimization-glossary/ab-testing/"
+    ]
+  },
+  {
+    "term": "Model Versioning",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Model Version Control"],
+    "definition": "The practice of tracking and managing different versions of machine learning models, enabling rollback, comparison, and reproducibility in production systems.",
+    "related": ["Version Control", "Model Registry", "Reproducibility", "Model Lifecycle"],
+    "tags": ["model-versioning", "version-control", "model-management"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_versioning",
+      "https://mlflow.org/docs/latest/model-registry.html"
+    ]
+  },
+  {
+    "term": "CI/CD for ML",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Continuous Integration/Continuous Deployment", "ML Pipeline Automation"],
+    "definition": "The adaptation of continuous integration and deployment practices for machine learning, automating model training, testing, and deployment workflows.",
+    "related": ["MLOps", "Pipeline Automation", "DevOps", "Automated Testing"],
+    "tags": ["cicd", "automation", "ml-pipeline"],
+    "references": [
+      "https://en.wikipedia.org/wiki/CI/CD",
+      "https://www.databricks.com/glossary/ci-cd"
+    ]
+  },
+  {
+    "term": "Model Registry",
+    "category": "Model Deployment & Operations",
+    "aliases": ["ML Model Registry"],
+    "definition": "A centralized repository for storing, organizing, and managing machine learning models throughout their lifecycle, including metadata, versions, and deployment status.",
+    "related": ["Model Versioning", "Model Management", "MLOps", "Model Lifecycle"],
+    "tags": ["model-registry", "model-management", "centralized-storage"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_registry",
+      "https://mlflow.org/docs/latest/model-registry.html"
+    ]
+  },
+  {
+    "term": "Inference",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Model Inference", "Prediction"],
+    "definition": "The process of using a trained machine learning model to make predictions or generate outputs on new, unseen data in production environments.",
+    "related": ["Model Serving", "Prediction", "Real-time Processing", "Batch Processing"],
+    "tags": ["inference", "prediction", "model-serving"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Statistical_inference",
+      "https://www.nvidia.com/en-us/glossary/data-science/inference/"
+    ]
+  },
+  {
+    "term": "Canary Deployment",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Canary Release"],
+    "definition": "A deployment strategy that gradually rolls out a new model version to a small subset of users before full deployment, allowing early detection of issues.",
+    "related": ["Blue-Green Deployment", "Progressive Deployment", "Risk Mitigation", "Model Rollout"],
+    "tags": ["canary-deployment", "gradual-rollout", "risk-mitigation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Canary_deployment",
+      "https://martinfowler.com/bliki/CanaryRelease.html"
+    ]
+  },
+  {
+    "term": "Model Drift",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Concept Drift", "Model Degradation"],
+    "definition": "The phenomenon where a model's performance degrades over time due to changes in the underlying data patterns or relationships it was trained to recognize.",
+    "related": ["Data Drift", "Model Monitoring", "Model Retraining", "Performance Degradation"],
+    "tags": ["model-drift", "performance-degradation", "concept-drift"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Concept_drift",
+      "https://www.evidentlyai.com/blog/machine-learning-monitoring-model-drift"
+    ]
+  },
+  {
+    "term": "Load Balancing",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Traffic Distribution"],
+    "definition": "The practice of distributing incoming requests across multiple model instances or servers to ensure optimal resource utilization and system reliability.",
+    "related": ["Scalability", "High Availability", "Distributed Systems", "Performance Optimization"],
+    "tags": ["load-balancing", "scalability", "distributed-systems"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Load_balancing_(computing)",
+      "https://aws.amazon.com/what-is/load-balancing/"
+    ]
+  },
+  {
+    "term": "Model Serving",
+    "category": "Model Deployment & Operations",
+    "aliases": ["ML Serving", "Prediction Serving"],
+    "definition": "The infrastructure and processes that enable deployed machine learning models to receive requests and return predictions in production environments.",
+    "related": ["Model Deployment", "API Gateway", "Inference", "Real-time Serving"],
+    "tags": ["model-serving", "production-inference", "api-serving"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_serving",
+      "https://www.tensorflow.org/tfx/guide/serving"
+    ]
+  },
+  {
+    "term": "Shadow Deployment",
+    "category": "Model Deployment & Operations",
+    "aliases": ["Shadow Mode", "Parallel Deployment"],
+    "definition": "A deployment strategy where a new model version runs alongside the production model, processing the same inputs but without affecting user-facing results, allowing safe performance comparison.",
+    "related": ["Canary Deployment", "A/B Testing", "Model Validation", "Risk Mitigation"],
+    "tags": ["shadow-deployment", "parallel-testing", "safe-deployment"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Shadow_deployment",
+      "https://martinfowler.com/bliki/ParallelChange.html"
+    ]
+  },
+  {
+    "term": "TensorFlow",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["TF"],
+    "definition": "An open-source machine learning framework developed by Google that provides tools and libraries for building and deploying ML models across various platforms and devices.",
+    "related": ["PyTorch", "Keras", "Deep Learning Framework", "Google"],
+    "tags": ["tensorflow", "ml-framework", "deep-learning"],
+    "references": [
+      "https://en.wikipedia.org/wiki/TensorFlow",
+      "https://www.tensorflow.org/"
+    ]
+  },
+  {
+    "term": "PyTorch",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Torch"],
+    "definition": "An open-source machine learning library developed by Meta that provides dynamic computation graphs and is widely used for research and production deep learning applications.",
+    "related": ["TensorFlow", "Deep Learning Framework", "Dynamic Computation Graph", "Meta"],
+    "tags": ["pytorch", "ml-framework", "dynamic-graphs"],
+    "references": [
+      "https://en.wikipedia.org/wiki/PyTorch",
+      "https://pytorch.org/"
+    ]
+  },
+  {
+    "term": "Hugging Face",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["HF", "Transformers Library"],
+    "definition": "A platform and library ecosystem that provides pre-trained models, datasets, and tools for natural language processing and machine learning, particularly focused on transformer models.",
+    "related": ["Transformer", "Pre-trained Models", "Model Hub", "NLP"],
+    "tags": ["huggingface", "model-hub", "transformers"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Hugging_Face",
+      "https://huggingface.co/"
+    ]
+  },
+  {
+    "term": "GPU Computing",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Graphics Processing Unit Computing", "CUDA Computing"],
+    "definition": "The use of graphics processing units to accelerate computationally intensive tasks, particularly parallel operations common in machine learning and deep learning.",
+    "related": ["CUDA", "Parallel Computing", "Deep Learning", "High Performance Computing"],
+    "tags": ["gpu-computing", "parallel-processing", "acceleration"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Graphics_processing_unit",
+      "https://developer.nvidia.com/gpu-computing"
+    ]
+  },
+  {
+    "term": "Cloud AI Services",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["AI as a Service", "Machine Learning as a Service"],
+    "definition": "Cloud-based platforms and APIs that provide pre-built AI capabilities, infrastructure, and tools for developing and deploying machine learning applications without managing underlying hardware.",
+    "related": ["Amazon Web Services", "Google Cloud AI", "Microsoft Azure AI", "API Services"],
+    "tags": ["cloud-ai", "ai-as-service", "cloud-platforms"],
+    "references": [
+      "https://en.wikipedia.org/wiki/AI_as_a_service",
+      "https://aws.amazon.com/machine-learning/"
+    ]
+  },
+  {
+    "term": "Docker",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Containerization"],
+    "definition": "A platform that uses containerization technology to package applications and their dependencies into portable containers, widely used for deploying ML models consistently across environments.",
+    "related": ["Containerization", "Kubernetes", "Model Deployment", "DevOps"],
+    "tags": ["docker", "containerization", "deployment"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Docker_(software)",
+      "https://docs.docker.com/"
+    ]
+  },
+  {
+    "term": "Kubernetes",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["K8s", "Container Orchestration"],
+    "definition": "An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications, commonly used for ML workloads.",
+    "related": ["Docker", "Container Orchestration", "Microservices", "Scalability"],
+    "tags": ["kubernetes", "orchestration", "scalability"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Kubernetes",
+      "https://kubernetes.io/"
+    ]
+  },
+  {
+    "term": "MLflow",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["ML Flow"],
+    "definition": "An open-source platform for managing the complete machine learning lifecycle, including experimentation, reproducibility, deployment, and model registry.",
+    "related": ["MLOps", "Model Registry", "Experiment Tracking", "Model Management"],
+    "tags": ["mlflow", "ml-lifecycle", "experiment-tracking"],
+    "references": [
+      "https://en.wikipedia.org/wiki/MLflow",
+      "https://mlflow.org/"
+    ]
+  },
+  {
+    "term": "Apache Spark",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Spark"],
+    "definition": "An open-source unified analytics engine for large-scale data processing that provides built-in modules for machine learning, graph processing, and stream processing.",
+    "related": ["Big Data", "Distributed Computing", "MLlib", "Data Processing"],
+    "tags": ["apache-spark", "big-data", "distributed-computing"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Apache_Spark",
+      "https://spark.apache.org/"
+    ]
+  },
+  {
+    "term": "API Gateway",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Application Programming Interface Gateway"],
+    "definition": "A server that acts as an intermediary between clients and backend services, managing API requests, authentication, rate limiting, and routing for ML model endpoints.",
+    "related": ["REST API", "Model Serving", "Microservices", "Load Balancing"],
+    "tags": ["api-gateway", "api-management", "microservices"],
+    "references": [
+      "https://en.wikipedia.org/wiki/API_gateway",
+      "https://aws.amazon.com/api-gateway/"
+    ]
+  },
+  {
+    "term": "Jupyter Notebook",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Jupyter", "IPython Notebook"],
+    "definition": "An open-source web application that allows creation and sharing of documents containing live code, equations, visualizations, and narrative text, widely used for data science and ML experimentation.",
+    "related": ["Data Science", "Interactive Computing", "Python", "Experimentation"],
+    "tags": ["jupyter", "interactive-computing", "data-science"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Project_Jupyter",
+      "https://jupyter.org/"
+    ]
+  },
+  {
+    "term": "Edge Computing",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Edge AI", "Edge Inference"],
+    "definition": "A distributed computing paradigm that brings computation and data storage closer to data sources, enabling real-time AI inference with reduced latency and bandwidth usage.",
+    "related": ["IoT", "Real-time Processing", "Distributed Computing", "Low Latency"],
+    "tags": ["edge-computing", "distributed-ai", "real-time"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Edge_computing",
+      "https://www.nvidia.com/en-us/glossary/data-science/edge-ai/"
+    ]
+  },
+  {
+    "term": "Model Zoo",
+    "category": "AI Infrastructure & Ecosystem",
+    "aliases": ["Pre-trained Model Repository"],
+    "definition": "A collection of pre-trained machine learning models that can be downloaded and used for various tasks, often including model weights, architectures, and documentation.",
+    "related": ["Pre-trained Models", "Transfer Learning", "Model Repository", "Hugging Face"],
+    "tags": ["model-zoo", "pre-trained-models", "model-repository"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Model_zoo",
+      "https://modelzoo.co/"
+    ]
+  },
+  {
+    "term": "Algorithmic Bias",
+    "category": "Ethics & Governance",
+    "aliases": ["AI Bias", "Machine Learning Bias"],
+    "definition": "Systematic and unfair discrimination that occurs when AI algorithms produce biased results due to biased training data, flawed assumptions, or inadequate model design.",
+    "related": ["Fairness", "Discrimination", "Bias Mitigation", "Responsible AI"],
+    "tags": ["algorithmic-bias", "fairness", "discrimination"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Algorithmic_bias",
+      "https://www.brookings.edu/research/algorithmic-bias-detection-and-mitigation/"
+    ]
+  },
+  {
+    "term": "Explainable AI",
+    "category": "Ethics & Governance",
+    "aliases": ["XAI", "Interpretable AI"],
+    "definition": "AI systems designed to provide clear, understandable explanations for their decisions and predictions, enabling humans to comprehend and trust AI reasoning processes.",
+    "related": ["Model Interpretability", "Transparency", "Trust", "Accountability"],
+    "tags": ["explainable-ai", "interpretability", "transparency"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Explainable_artificial_intelligence",
+      "https://www.ibm.com/topics/explainable-ai"
+    ]
+  },
+  {
+    "term": "Responsible AI",
+    "category": "Ethics & Governance",
+    "aliases": ["Ethical AI", "AI Ethics"],
+    "definition": "The practice of developing and deploying AI systems in ways that are ethical, fair, transparent, and accountable, considering their impact on society and individuals.",
+    "related": ["AI Ethics", "Fairness", "Transparency", "Accountability"],
+    "tags": ["responsible-ai", "ai-ethics", "ethical-development"],
+    "references": [
+      "https://en.wikipedia.org/wiki/AI_ethics",
+      "https://www.microsoft.com/en-us/ai/responsible-ai"
+    ]
+  },
+  {
+    "term": "Fairness",
+    "category": "Ethics & Governance",
+    "aliases": ["AI Fairness", "Algorithmic Fairness"],
+    "definition": "The principle that AI systems should treat all individuals and groups equitably, without discrimination based on protected characteristics or unjust bias.",
+    "related": ["Algorithmic Bias", "Discrimination", "Equity", "Justice"],
+    "tags": ["fairness", "equity", "non-discrimination"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Fairness_(machine_learning)",
+      "https://www.google.com/about/main/ai-principles/"
+    ]
+  },
+  {
+    "term": "Privacy-Preserving ML",
+    "category": "Ethics & Governance",
+    "aliases": ["Privacy-Preserving Machine Learning"],
+    "definition": "Techniques and methods that enable machine learning while protecting the privacy of individual data subjects, including differential privacy and federated learning.",
+    "related": ["Differential Privacy", "Federated Learning", "Data Privacy", "GDPR"],
+    "tags": ["privacy-preserving", "data-protection", "privacy"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Privacy-preserving_machine_learning",
+      "https://www.microsoft.com/en-us/research/project/privacy-preserving-machine-learning/"
+    ]
+  },
+  {
+    "term": "Differential Privacy",
+    "category": "Ethics & Governance",
+    "aliases": ["DP"],
+    "definition": "A mathematical framework for quantifying and limiting privacy loss when analyzing datasets, ensuring individual privacy while enabling useful statistical analysis.",
+    "related": ["Privacy-Preserving ML", "Data Privacy", "Statistical Privacy", "Noise Addition"],
+    "tags": ["differential-privacy", "privacy-protection", "statistical-privacy"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Differential_privacy",
+      "https://desfontain.es/privacy/differential-privacy-awesomeness.html"
+    ]
+  },
+  {
+    "term": "AI Governance",
+    "category": "Ethics & Governance",
+    "aliases": ["Artificial Intelligence Governance"],
+    "definition": "The frameworks, policies, and processes that guide the development, deployment, and use of AI systems to ensure they align with societal values and legal requirements.",
+    "related": ["AI Policy", "Regulation", "Compliance", "Risk Management"],
+    "tags": ["ai-governance", "policy", "regulation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/AI_governance",
+      "https://www.oecd.org/digital/artificial-intelligence/"
+    ]
+  },
+  {
+    "term": "Model Auditing",
+    "category": "Ethics & Governance",
+    "aliases": ["AI Auditing", "Algorithm Auditing"],
+    "definition": "The systematic examination and evaluation of AI models to assess their performance, fairness, compliance, and potential risks or biases.",
+    "related": ["Bias Detection", "Compliance", "Risk Assessment", "Model Validation"],
+    "tags": ["model-auditing", "compliance", "bias-detection"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Algorithm_audit",
+      "https://www.brookings.edu/research/auditing-algorithms-the-existing-landscape-obstacles-and-recommendations/"
+    ]
+  },
+  {
+    "term": "Consent Management",
+    "category": "Ethics & Governance",
+    "aliases": ["Data Consent", "Privacy Consent"],
+    "definition": "Systems and processes for obtaining, managing, and respecting user consent for data collection and AI processing, ensuring compliance with privacy regulations.",
+    "related": ["GDPR", "Privacy Rights", "Data Protection", "User Control"],
+    "tags": ["consent-management", "privacy-rights", "data-protection"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Informed_consent",
+      "https://gdpr.eu/what-is-gdpr/"
+    ]
+  },
+  {
+    "term": "Right to Explanation",
+    "category": "Ethics & Governance",
+    "aliases": ["Algorithmic Transparency"],
+    "definition": "The principle that individuals have the right to understand and receive explanations for automated decisions that significantly affect them, especially in high-stakes applications.",
+    "related": ["Explainable AI", "GDPR", "Transparency", "Accountability"],
+    "tags": ["right-to-explanation", "transparency", "user-rights"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Right_to_explanation",
+      "https://arxiv.org/abs/1606.08813"
+    ]
+  },
+  {
+    "term": "AI Safety",
+    "category": "Ethics & Governance",
+    "aliases": ["Artificial Intelligence Safety"],
+    "definition": "The field focused on ensuring AI systems behave safely and beneficially, avoiding harmful or unintended consequences as AI capabilities become more advanced.",
+    "related": ["AI Alignment", "Risk Mitigation", "Safe AI", "AI Control"],
+    "tags": ["ai-safety", "risk-mitigation", "safe-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/AI_safety",
+      "https://www.safe.ai/"
+    ]
+  },
+  {
+    "term": "Bias Mitigation",
+    "category": "Ethics & Governance",
+    "aliases": ["Debiasing", "Bias Reduction"],
+    "definition": "Techniques and strategies used to identify, measure, and reduce unfair bias in AI systems, including pre-processing, in-processing, and post-processing approaches.",
+    "related": ["Algorithmic Bias", "Fairness", "Bias Detection", "Fair ML"],
+    "tags": ["bias-mitigation", "debiasing", "fair-ml"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Fairness_(machine_learning)#Bias_mitigation",
+      "https://www.ibm.com/topics/bias-in-ai"
+    ]
+  },
+  {
+    "term": "Accountability",
+    "category": "Ethics & Governance",
+    "aliases": ["AI Accountability"],
+    "definition": "The principle that individuals and organizations developing or deploying AI systems should be responsible and answerable for their systems' decisions and impacts.",
+    "related": ["Responsibility", "Transparency", "Governance", "Liability"],
+    "tags": ["accountability", "responsibility", "liability"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Accountability",
+      "https://www.partnershiponai.org/about/#mission"
+    ]
+  }
+]
+[
+  {
+    "term": "Computer Vision",
+    "category": "Applied AI Domains",
+    "aliases": ["CV", "Machine Vision"],
+    "definition": "A field of AI that enables computers to interpret and understand visual information from the world, including tasks like image recognition, object detection, and scene understanding.",
+    "related": ["Image Recognition", "Object Detection", "Image Classification", "CNN"],
+    "tags": ["computer-vision", "image-processing", "visual-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Computer_vision",
+      "https://www.ibm.com/topics/computer-vision"
+    ]
+  },
+  {
+    "term": "Financial AI",
+    "category": "Applied AI Domains",
+    "aliases": ["FinTech AI", "AI in Finance"],
+    "definition": "The application of artificial intelligence in financial services including algorithmic trading, risk assessment, credit scoring, and regulatory compliance.",
+    "related": ["Fraud Detection", "Algorithmic Trading", "Credit Scoring", "Risk Management"],
+    "tags": ["financial-ai", "fintech", "algorithmic-trading"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence_in_finance",
+      "https://www.jpmorgan.com/technology/artificial-intelligence"
+    ]
+  },
+  {
+    "term": "Robotics",
+    "category": "Applied AI Domains",
+    "aliases": ["AI Robotics", "Intelligent Robotics"],
+    "definition": "The field that combines AI with mechanical engineering to create robots capable of perceiving their environment, making decisions, and performing physical tasks autonomously.",
+    "related": ["Autonomous Systems", "Computer Vision", "Sensor Fusion", "Motion Planning"],
+    "tags": ["robotics", "autonomous-robots", "physical-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Robotics",
+      "https://www.robotics.org/content-detail.cfm/Industrial-Robotics-Industry-Insights/What-is-Robotics/content_id/4538"
+    ]
+  },
+  {
+    "term": "Agricultural AI",
+    "category": "Applied AI Domains",
+    "aliases": ["AgTech", "Precision Agriculture"],
+    "definition": "The application of AI technologies in agriculture to optimize crop yields, monitor plant health, automate farming processes, and improve resource efficiency.",
+    "related": ["Computer Vision", "IoT Sensors", "Crop Monitoring", "Precision Farming"],
+    "tags": ["agricultural-ai", "agtech", "precision-agriculture"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Digital_agriculture",
+      "https://www.fao.org/3/ca4887en/ca4887en.pdf"
+    ]
+  },
+  {
+    "term": "Cybersecurity AI",
+    "category": "Applied AI Domains",
+    "aliases": ["AI Security", "Intelligent Security"],
+    "definition": "The use of artificial intelligence to detect, prevent, and respond to cyber threats through pattern recognition, anomaly detection, and automated security response.",
+    "related": ["Threat Detection", "Anomaly Detection", "Intrusion Detection", "Security Analytics"],
+    "tags": ["cybersecurity-ai", "threat-detection", "security-analytics"],
+    "references": [
+      "https://en.wikipedia.org/wiki/AI_for_cybersecurity",
+      "https://www.ibm.com/topics/ai-cybersecurity"
+    ]
+  },
+  {
+    "term": "Legal AI",
+    "category": "Applied AI Domains",
+    "aliases": ["LegalTech", "AI in Law"],
+    "definition": "The application of AI in legal practice including document review, legal research, contract analysis, and case prediction to improve efficiency and accuracy.",
+    "related": ["Document Analysis", "Natural Language Processing", "Contract Review", "Legal Analytics"],
+    "tags": ["legal-ai", "legaltech", "document-analysis"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Legal_technology",
+      "https://www.americanbar.org/groups/law_practice/publications/techreport/2019/ai/"
+    ]
+  },
+  {
+    "term": "Climate AI",
+    "category": "Applied AI Domains",
+    "aliases": ["Environmental AI", "Climate Tech"],
+    "definition": "The application of AI to address climate change challenges including weather prediction, renewable energy optimization, and environmental monitoring.",
+    "related": ["Weather Forecasting", "Environmental Monitoring", "Energy Optimization", "Sustainability"],
+    "tags": ["climate-ai", "environmental-ai", "sustainability"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Climate_informatics",
+      "https://www.climatechange.ai/"
+    ]
+  },
+  {
+    "term": "Healthcare AI",
+    "category": "Applied AI Domains",
+    "aliases": ["Medical AI", "AI in Healthcare"],
+    "definition": "The application of artificial intelligence technologies in healthcare to improve patient outcomes, assist diagnosis, personalize treatment, and optimize healthcare operations.",
+    "related": ["Medical Imaging", "Drug Discovery", "Clinical Decision Support", "Telemedicine"],
+    "tags": ["healthcare-ai", "medical-ai", "clinical-applications"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare",
+      "https://www.who.int/publications/i/item/9789240029200"
+    ]
+  },
+  {
+    "term": "Autonomous Vehicles",
+    "category": "Applied AI Domains",
+    "aliases": ["Self-Driving Cars", "Driverless Cars", "AV"],
+    "definition": "Vehicles equipped with AI systems that can navigate and operate without human intervention, using sensors, computer vision, and decision-making algorithms.",
+    "related": ["Computer Vision", "Sensor Fusion", "Path Planning", "LIDAR"],
+    "tags": ["autonomous-vehicles", "self-driving", "transportation"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Self-driving_car",
+      "https://www.nhtsa.gov/technology-innovation/automated-vehicles"
+    ]
+  },
+  {
+    "term": "Recommender System",
+    "category": "Applied AI Domains",
+    "aliases": ["Recommendation Engine", "Recommendation System"],
+    "definition": "AI systems that suggest relevant items, content, or services to users based on their preferences, behavior, and similarities with other users or items.",
+    "related": ["Collaborative Filtering", "Content-Based Filtering", "Personalization", "Matrix Factorization"],
+    "tags": ["recommender-system", "personalization", "user-modeling"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Recommender_system",
+      "https://developers.google.com/machine-learning/recommendation"
+    ]
+  },
+  {
+    "term": "Fraud Detection",
+    "category": "Applied AI Domains",
+    "aliases": ["Financial Fraud Detection", "Anomaly Detection"],
+    "definition": "The use of AI and machine learning to identify fraudulent activities, transactions, or behaviors by detecting patterns and anomalies in data.",
+    "related": ["Anomaly Detection", "Financial AI", "Risk Assessment", "Pattern Recognition"],
+    "tags": ["fraud-detection", "anomaly-detection", "financial-security"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Credit_card_fraud",
+      "https://www.sas.com/en_us/insights/fraud/fraud-detection.html"
+    ]
+  },
+  {
+    "term": "Speech Recognition",
+    "category": "Applied AI Domains",
+    "aliases": ["Automatic Speech Recognition", "ASR", "Voice Recognition"],
+    "definition": "Technology that converts spoken language into text, enabling voice-based interfaces and applications through audio signal processing and language modeling.",
+    "related": ["Natural Language Processing", "Voice Assistant", "Audio Processing", "Language Model"],
+    "tags": ["speech-recognition", "voice-processing", "audio-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Speech_recognition",
+      "https://cloud.google.com/speech-to-text"
+    ]
+  },
+  {
+    "term": "Drug Discovery",
+    "category": "Applied AI Domains",
+    "aliases": ["AI Drug Discovery", "Computational Drug Discovery"],
+    "definition": "The application of AI and machine learning to accelerate the identification and development of new pharmaceutical compounds and treatments.",
+    "related": ["Healthcare AI", "Molecular Modeling", "Bioinformatics", "Protein Folding"],
+    "tags": ["drug-discovery", "pharmaceutical-ai", "molecular-ai"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Drug_discovery",
+      "https://www.nature.com/articles/s41573-019-0024-5"
+    ]
+  },
+  {
+    "term": "Smart Manufacturing",
+    "category": "Applied AI Domains",
+    "aliases": ["Industry 4.0", "Intelligent Manufacturing"],
+    "definition": "The integration of AI technologies into manufacturing processes to optimize production, predict maintenance needs, ensure quality control, and increase efficiency.",
+    "related": ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization", "IoT"],
+    "tags": ["smart-manufacturing", "industry-40", "production-optimization"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Smart_manufacturing",
+      "https://www.mckinsey.com/capabilities/operations/our-insights/smart-manufacturing"
     ]
   }
 ]

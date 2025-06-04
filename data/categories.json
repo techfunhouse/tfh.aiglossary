@@ -14,7 +14,7 @@
   {
     "name": "Prompt Engineering",
     "description": "Techniques for designing and optimizing input prompts to guide large language models (LLMs) and other generative AI systems in producing desired outputs."    
-  }
+  },
   {
     "name": "Natural Language Processing (NLP)",
     "description": "Techniques and models focused on understanding, processing, and generating human language — including tasks like tokenization, summarization, and translation."

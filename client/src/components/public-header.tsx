@@ -40,15 +40,15 @@ export function PublicHeader({ selectedCategory, totalTerms, onSearch }: PublicH
   };
 
   return (
-    <header className="bg-white border-b border-secondary-200 px-8 py-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
-          <p className="text-secondary-600 mt-1">{getViewSubtitle()}</p>
+    <header className="bg-white border-b border-secondary-200 px-4 md:px-8 py-4 md:py-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between space-y-4 md:space-y-0">
+        <div className="pl-12 md:pl-0">
+          <h2 className="text-xl md:text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
+          <p className="text-sm md:text-base text-secondary-600 mt-1">{getViewSubtitle()}</p>
         </div>
         
         <div className="flex items-center space-x-4">
-          <div className="relative">
+          <div className="relative flex-1 md:flex-none">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <Search className="text-secondary-400 w-4 h-4" />
             </div>
@@ -56,7 +56,7 @@ export function PublicHeader({ selectedCategory, totalTerms, onSearch }: PublicH
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
-              className="pl-10 pr-4 py-2.5 w-80 border border-secondary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+              className="pl-10 pr-4 py-2.5 w-full md:w-80 border border-secondary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
               placeholder="Search terms, definitions, aliases..."
             />
           </div>

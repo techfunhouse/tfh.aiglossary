@@ -47,14 +47,14 @@ export function PublicDashboard() {
         onCategoryChange={handleCategoryChange}
       />
 
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col w-full md:w-auto">
         <PublicHeader
           selectedCategory={selectedCategory}
           totalTerms={terms.length}
           onSearch={handleSearch}
         />
 
-        <div className="flex-1 overflow-y-auto px-8 py-6">
+        <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 pt-16 md:pt-6">
           <PublicTermsGrid
             terms={terms}
             isLoading={isLoading}

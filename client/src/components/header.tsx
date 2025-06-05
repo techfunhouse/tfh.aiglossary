@@ -49,9 +49,9 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
   };
 
   return (
-    <header className="bg-white border-b border-secondary-200 px-8 py-6">
+    <header className="bg-white border-b border-secondary-200 px-4 md:px-8 py-6">
       <div className="flex items-center justify-between">
-        <div>
+        <div className="ml-12 md:ml-0">
           <h2 className="text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
           <p className="text-secondary-600 mt-1">{getViewSubtitle()}</p>
         </div>

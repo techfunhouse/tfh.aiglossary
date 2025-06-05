@@ -1,8 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import { Category, Term } from "@shared/schema";
-import { STATIC_CATEGORIES, STATIC_TERMS } from "@/data/static-data";
+
+// Import data directly from root data directory
+import categoriesData from "../../../data/categories.json";
+import termsData from "../../../data/terms.json";
 
 const isStaticMode = import.meta.env.PROD && !import.meta.env.VITE_API_URL;
+
+// Add IDs to imported data
+const STATIC_CATEGORIES: Category[] = categoriesData.map((category, index) => ({
+  id: index + 1,
+  ...category
+}));
+
+const STATIC_TERMS: Term[] = termsData.map((term, index) => ({
+  id: index + 1,
+  ...term
+}));
 
 export function useTermsStatic(category?: string, search?: string) {
   return useQuery({

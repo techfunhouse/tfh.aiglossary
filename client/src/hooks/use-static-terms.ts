@@ -30,7 +30,8 @@ export function useTermsStatic(category?: string, search?: string) {
           );
         }
         
-        return filteredTerms;
+        // Sort terms alphabetically to match navigation logic
+        return filteredTerms.sort((a, b) => a.term.localeCompare(b.term));
       } catch (error) {
         console.error("Failed to load static terms:", error);
         return [];

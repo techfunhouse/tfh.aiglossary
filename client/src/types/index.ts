@@ -13,11 +13,11 @@ export interface Term {
   id: number;
   term: string;
   category: string;
-  aliases?: string[];
+  aliases?: string[] | null;
   definition: string;
-  related?: string[];
-  tags?: string[];
-  references?: string[];
+  related?: string[] | null;
+  tags?: string[] | null;
+  references?: string[] | null;
 }
 
 export interface CreateTermRequest {

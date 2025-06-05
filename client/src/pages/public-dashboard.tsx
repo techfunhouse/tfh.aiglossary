@@ -34,6 +34,8 @@ export function PublicDashboard() {
 
   const handleNavigateToTerm = (term: Term) => {
     setSelectedTerm(term);
+    // Ensure dialog stays open when navigating between terms
+    setIsDetailDialogOpen(true);
   };
 
   const handleCloseDetailDialog = () => {

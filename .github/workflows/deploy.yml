@@ -28,6 +28,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Clean previous builds
+      run: rm -rf dist
+
     - name: Build application
       run: npx vite build --config vite.config.pages.ts
 

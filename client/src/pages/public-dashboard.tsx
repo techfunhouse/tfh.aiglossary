@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { useTermsStatic, useCategoriesStatic } from "@/hooks/use-static-terms";
-import { useTerms as useTermsAPI, useCategories as useCategoriesAPI } from "@/hooks/use-terms";
 import { Sidebar } from "@/components/sidebar";
 import { Header } from "@/components/header";
 import { SearchBar } from "@/components/search-bar";
 import { TermsGrid } from "@/components/terms-grid";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
 import { Term } from "@/types";
-import { isGitHubPages } from "@/lib/utils";
 
 export function PublicDashboard() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -15,18 +13,10 @@ export function PublicDashboard() {
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
   const [selectedTerm, setSelectedTerm] = useState<Term | null>(null);
 
-  // Use static data files when on GitHub Pages, API when on development server
-  const useStaticData = isGitHubPages();
-  
-  const { data: staticTerms = [], isLoading: staticLoading } = useTermsStatic(
+  const { data: terms = [], isLoading } = useTermsStatic(
     selectedCategory === "all" ? undefined : selectedCategory,
     searchQuery || undefined
   );
-  
-  const { data: apiTerms = [], isLoading: apiLoading } = useTermsAPI();
-  
-  const terms = useStaticData ? staticTerms : apiTerms;
-  const isLoading = useStaticData ? staticLoading : apiLoading;
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);

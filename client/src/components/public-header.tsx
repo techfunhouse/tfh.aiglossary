@@ -62,6 +62,14 @@ export function PublicHeader({ selectedCategory, totalTerms, onSearch }: PublicH
               placeholder="Search terms, definitions, aliases..."
             />
           </div>
+          {import.meta.env.DEV && (
+            <Link href="/admin">
+              <Button variant="outline" size="sm" className="hidden md:flex items-center space-x-2">
+                <Settings className="w-4 h-4" />
+                <span>Admin</span>
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
     </header>

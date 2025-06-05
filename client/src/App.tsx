@@ -9,8 +9,8 @@ import { Dashboard } from "@/pages/dashboard";
 import { PublicDashboard } from "@/pages/public-dashboard";
 
 function AppContent() {
-  const { user, isLoading } = useAuth();
   const isDevelopment = import.meta.env.DEV;
+  const { user, isLoading } = isDevelopment ? useAuth() : { user: null, isLoading: false };
 
   return (
     <Switch>

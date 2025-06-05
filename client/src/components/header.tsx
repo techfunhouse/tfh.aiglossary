@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, LogOut, User } from "lucide-react";
+import { Search, LogOut, User, X } from "lucide-react";
 import { debounce } from "@/lib/utils";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -27,6 +27,11 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
     const value = e.target.value;
     setSearchQuery(value);
     debouncedSearch(value);
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
+    onSearch("");
   };
 
   const getViewTitle = () => {
@@ -60,9 +65,19 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
-              className="pl-10 pr-4 py-2.5 w-80 border border-secondary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+              className="pl-10 pr-10 py-2.5 w-80 border border-secondary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
               placeholder="Search terms, definitions, aliases..."
             />
+            {searchQuery && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={clearSearch}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-secondary-400 hover:text-secondary-600 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </Button>
+            )}
           </div>
           
           {isAdminMode && user && (

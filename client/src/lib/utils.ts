@@ -25,3 +25,10 @@ export function formatArrayFromText(text: string): string[] {
   if (!text) return [];
   return text.split(',').map(item => item.trim()).filter(item => item);
 }
+
+export function isGitHubPages(): boolean {
+  // Detect if running on GitHub Pages
+  return typeof window !== 'undefined' && 
+         (window.location.hostname.includes('.github.io') || 
+          window.location.hostname.includes('techfunhouse.com'));
+}

@@ -40,7 +40,8 @@ jobs:
         cp dist/index.html .
         cp -r dist/assets .
         
-        # Ensure data files are available at root level
+        # Ensure data files are available at both root and dist
+        cp -r data .
         cp -r data dist/
         
         # Create .nojekyll to prevent Jekyll processing
@@ -52,6 +53,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
+        force_orphan: true
         exclude_assets: |
           node_modules/**
           server/**

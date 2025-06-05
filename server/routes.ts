@@ -4,6 +4,8 @@ import session from "express-session";
 import { storage } from "./storage";
 import { loginSchema, insertTermSchema, updateTermSchema } from "@shared/schema";
 import { z } from "zod";
+import express from "express";
+import path from "path";
 
 declare module "express-session" {
   interface SessionData {
@@ -12,6 +14,9 @@ declare module "express-session" {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static data files for GitHub Pages compatibility
+  app.use('/data', express.static(path.resolve(process.cwd(), 'data')));
+
   // Session configuration
   app.use(
     session({

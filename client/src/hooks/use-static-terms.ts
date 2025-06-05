@@ -5,13 +5,36 @@ export function useTermsStatic(category?: string, search?: string) {
   return useQuery({
     queryKey: ["terms", category, search],
     queryFn: async () => {
-      const params = new URLSearchParams();
-      if (category && category !== "All" && category !== "all") params.set("category", category);
-      if (search) params.set("search", search);
-      
-      const response = await fetch(`/api/terms?${params}`);
-      if (!response.ok) throw new Error("Failed to fetch terms");
-      return response.json();
+      try {
+        const response = await fetch("/data/terms.json");
+        if (!response.ok) throw new Error("Failed to fetch terms");
+        const allTerms: Term[] = await response.json();
+        
+        let filteredTerms = allTerms;
+        
+        // Filter by category
+        if (category && category !== "All" && category !== "all") {
+          filteredTerms = filteredTerms.filter(term => 
+            term.category.toLowerCase() === category.toLowerCase()
+          );
+        }
+        
+        // Filter by search
+        if (search) {
+          const searchLower = search.toLowerCase();
+          filteredTerms = filteredTerms.filter(term =>
+            term.term.toLowerCase().includes(searchLower) ||
+            term.definition.toLowerCase().includes(searchLower) ||
+            term.aliases?.some(alias => alias.toLowerCase().includes(searchLower)) ||
+            term.tags?.some(tag => tag.toLowerCase().includes(searchLower))
+          );
+        }
+        
+        return filteredTerms;
+      } catch (error) {
+        console.error("Failed to load static terms:", error);
+        return [];
+      }
     },
     staleTime: 1000 * 60 * 5,
   });
@@ -21,9 +44,14 @@ export function useCategoriesStatic() {
   return useQuery({
     queryKey: ["categories"],
     queryFn: async () => {
-      const response = await fetch("/api/categories");
-      if (!response.ok) throw new Error("Failed to fetch categories");
-      return response.json();
+      try {
+        const response = await fetch("/data/categories.json");
+        if (!response.ok) throw new Error("Failed to fetch categories");
+        return response.json();
+      } catch (error) {
+        console.error("Failed to load static categories:", error);
+        return [];
+      }
     },
     staleTime: 1000 * 60 * 5,
   });
@@ -33,9 +61,15 @@ export function useTermStatic(id: number) {
   return useQuery({
     queryKey: ["term", id],
     queryFn: async () => {
-      const response = await fetch(`/api/terms/${id}`);
-      if (!response.ok) throw new Error("Failed to fetch term");
-      return response.json();
+      try {
+        const response = await fetch("/data/terms.json");
+        if (!response.ok) throw new Error("Failed to fetch terms");
+        const allTerms: Term[] = await response.json();
+        return allTerms.find(term => term.id === id) || null;
+      } catch (error) {
+        console.error("Failed to load static term:", error);
+        return null;
+      }
     },
     staleTime: 1000 * 60 * 5,
   });

@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 
 interface TermCardProps {
   term: Term;
-  onEdit: (term: Term) => void;
-  onDelete: (term: Term) => void;
+  onEdit?: (term: Term) => void;
+  onDelete?: (term: Term) => void;
   onView: (term: Term) => void;
+  isAdminMode?: boolean;
 }
 
 const categoryColors: Record<string, string> = {
@@ -26,19 +27,19 @@ const categoryColors: Record<string, string> = {
   "Applied AI Domains": "bg-emerald-50 text-emerald-700 border-emerald-200",
 };
 
-export function TermCard({ term, onEdit, onDelete, onView }: TermCardProps) {
+export function TermCard({ term, onEdit, onDelete, onView, isAdminMode = false }: TermCardProps) {
   const handleCardClick = () => {
     onView(term);
   };
 
   const handleEdit = (e: React.MouseEvent) => {
     e.stopPropagation();
-    onEdit(term);
+    if (onEdit) onEdit(term);
   };
 
   const handleDelete = (e: React.MouseEvent) => {
     e.stopPropagation();
-    onDelete(term);
+    if (onDelete) onDelete(term);
   };
 
   const categoryColorClass = categoryColors[term.category] || "bg-secondary-50 text-secondary-700 border-secondary-200";
@@ -69,26 +70,28 @@ export function TermCard({ term, onEdit, onDelete, onView }: TermCardProps) {
             )}
           </div>
         </div>
-        <div className="flex space-x-1">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleEdit}
-            className="p-2 text-secondary-400 hover:text-primary-500 hover:bg-primary-50 rounded-lg transition-colors"
-            title="Edit term"
-          >
-            <Edit className="w-4 h-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleDelete}
-            className="p-2 text-secondary-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-            title="Delete term"
-          >
-            <Trash2 className="w-4 h-4" />
-          </Button>
-        </div>
+        {isAdminMode && (
+          <div className="flex space-x-1">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleEdit}
+              className="p-2 text-secondary-400 hover:text-primary-500 hover:bg-primary-50 rounded-lg transition-colors"
+              title="Edit term"
+            >
+              <Edit className="w-4 h-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleDelete}
+              className="p-2 text-secondary-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+              title="Delete term"
+            >
+              <Trash2 className="w-4 h-4" />
+            </Button>
+          </div>
+        )}
       </div>
       
       <p className="text-secondary-700 text-sm mb-4 line-clamp-3">

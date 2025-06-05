@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTermsStatic as useTerms, useCategoriesStatic as useCategories } from "@/hooks/use-static-terms";
 import { PublicSidebar } from "@/components/public-sidebar";
 import { PublicHeader } from "@/components/public-header";
-import { PublicTermsGrid } from "@/components/public-terms-grid";
+import { TermsGrid } from "@/components/terms-grid";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
 import { Term } from "@/types";
 
@@ -55,10 +55,12 @@ export function PublicDashboard() {
         />
 
         <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 pt-16 md:pt-6">
-          <PublicTermsGrid
+          <TermsGrid
             terms={terms}
             isLoading={isLoading}
             onView={handleViewTerm}
+            onEdit={() => {}}
+            onDelete={() => {}}
           />
         </div>
       </main>

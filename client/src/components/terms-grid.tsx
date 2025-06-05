@@ -4,9 +4,10 @@ import { TermCard } from "./term-card";
 interface TermsGridProps {
   terms: Term[];
   isLoading: boolean;
-  onEdit: (term: Term) => void;
-  onDelete: (term: Term) => void;
+  onEdit?: (term: Term) => void;
+  onDelete?: (term: Term) => void;
   onView: (term: Term) => void;
+  isAdminMode?: boolean;
 }
 
 export function TermsGrid({ terms, isLoading, onEdit, onDelete, onView }: TermsGridProps) {

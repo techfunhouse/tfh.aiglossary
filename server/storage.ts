@@ -59,7 +59,10 @@ export class MemStorage implements IStorage {
       if (fs.existsSync(categoriesPath)) {
         const categoriesData = JSON.parse(fs.readFileSync(categoriesPath, "utf-8"));
         for (const categoryData of categoriesData) {
-          await this.createCategory(categoryData);
+          // Direct insertion without triggering save during initial load
+          const id = this.currentCategoryId++;
+          const category: Category = { ...categoryData, id };
+          this.categories.set(id, category);
         }
       }
     } catch (error) {
@@ -73,11 +76,52 @@ export class MemStorage implements IStorage {
       if (fs.existsSync(termsPath)) {
         const termsData = JSON.parse(fs.readFileSync(termsPath, "utf-8"));
         for (const termData of termsData) {
-          await this.createTerm(termData);
+          // Direct insertion without triggering save during initial load
+          const id = this.currentTermId++;
+          const term: Term = { 
+            ...termData, 
+            id,
+            aliases: termData.aliases || null,
+            related: termData.related || null,
+            tags: termData.tags || null,
+            references: termData.references || null
+          };
+          this.terms.set(id, term);
         }
       }
     } catch (error) {
       console.error("Error loading terms:", error);
+    }
+  }
+
+  private async saveTermsToFile() {
+    try {
+      const termsPath = path.resolve(process.cwd(), "data", "terms.json");
+      const termsArray = Array.from(this.terms.values()).map(term => ({
+        term: term.term,
+        category: term.category,
+        definition: term.definition,
+        aliases: term.aliases || [],
+        related: term.related || [],
+        tags: term.tags || [],
+        references: term.references || []
+      }));
+      fs.writeFileSync(termsPath, JSON.stringify(termsArray, null, 2));
+    } catch (error) {
+      console.error("Error saving terms:", error);
+    }
+  }
+
+  private async saveCategoriesToFile() {
+    try {
+      const categoriesPath = path.resolve(process.cwd(), "data", "categories.json");
+      const categoriesArray = Array.from(this.categories.values()).map(category => ({
+        name: category.name,
+        description: category.description
+      }));
+      fs.writeFileSync(categoriesPath, JSON.stringify(categoriesArray, null, 2));
+    } catch (error) {
+      console.error("Error saving categories:", error);
     }
   }
 
@@ -114,6 +158,9 @@ export class MemStorage implements IStorage {
     const id = this.currentCategoryId++;
     const category: Category = { ...insertCategory, id };
     this.categories.set(id, category);
+    if (process.env.NODE_ENV === "development") {
+      await this.saveCategoriesToFile();
+    }
     return category;
   }
 
@@ -158,6 +205,9 @@ export class MemStorage implements IStorage {
       references: insertTerm.references || null
     };
     this.terms.set(id, term);
+    if (process.env.NODE_ENV === "development") {
+      await this.saveTermsToFile();
+    }
     return term;
   }
 
@@ -169,11 +219,18 @@ export class MemStorage implements IStorage {
 
     const updatedTerm: Term = { ...existingTerm, ...updateTerm };
     this.terms.set(updateTerm.id, updatedTerm);
+    if (process.env.NODE_ENV === "development") {
+      await this.saveTermsToFile();
+    }
     return updatedTerm;
   }
 
   async deleteTerm(id: number): Promise<boolean> {
-    return this.terms.delete(id);
+    const deleted = this.terms.delete(id);
+    if (deleted && process.env.NODE_ENV === "development") {
+      await this.saveTermsToFile();
+    }
+    return deleted;
   }
 }
 

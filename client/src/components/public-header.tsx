@@ -1,7 +1,9 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Search, Settings } from "lucide-react";
 import { debounce } from "@/lib/utils";
+import { Link } from "wouter";
 
 interface PublicHeaderProps {
   selectedCategory: string;

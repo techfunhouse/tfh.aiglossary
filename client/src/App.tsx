@@ -10,31 +10,36 @@ import { PublicDashboard } from "@/pages/public-dashboard";
 
 function AppContent() {
   const { user, isLoading } = useAuth();
+  const isDevelopment = import.meta.env.DEV;
 
   return (
     <Switch>
-      <Route path="/login">
-        {isLoading ? (
-          <div className="min-h-screen flex items-center justify-center bg-secondary-50">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
-          </div>
-        ) : user ? (
-          <Dashboard />
-        ) : (
-          <LoginPage />
-        )}
-      </Route>
-      <Route path="/admin">
-        {isLoading ? (
-          <div className="min-h-screen flex items-center justify-center bg-secondary-50">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
-          </div>
-        ) : user ? (
-          <Dashboard />
-        ) : (
-          <LoginPage />
-        )}
-      </Route>
+      {isDevelopment && (
+        <Route path="/login">
+          {isLoading ? (
+            <div className="min-h-screen flex items-center justify-center bg-secondary-50">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+            </div>
+          ) : user ? (
+            <Dashboard />
+          ) : (
+            <LoginPage />
+          )}
+        </Route>
+      )}
+      {isDevelopment && (
+        <Route path="/admin">
+          {isLoading ? (
+            <div className="min-h-screen flex items-center justify-center bg-secondary-50">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+            </div>
+          ) : user ? (
+            <Dashboard />
+          ) : (
+            <LoginPage />
+          )}
+        </Route>
+      )}
       <Route>
         <PublicDashboard />
       </Route>

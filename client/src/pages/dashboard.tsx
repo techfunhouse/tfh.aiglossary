@@ -104,6 +104,7 @@ export function Dashboard() {
             onEdit={handleEditTerm}
             onDelete={handleDeleteTerm}
             onView={handleViewTerm}
+            isAdminMode={true}
           />
         </div>
       </main>

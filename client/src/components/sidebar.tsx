@@ -7,10 +7,11 @@ import { cn } from "@/lib/utils";
 interface SidebarProps {
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
-  onAddTerm: () => void;
+  onAddTerm?: () => void;
+  isAdminMode?: boolean;
 }
 
-export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm }: SidebarProps) {
+export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdminMode = false }: SidebarProps) {
   const { user, logout } = useAuth();
   const { data: categories = [] } = useCategories();
   const { data: allTerms = [] } = useTerms();

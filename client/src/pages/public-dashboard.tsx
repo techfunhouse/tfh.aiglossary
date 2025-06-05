@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTermsStatic as useTerms, useCategoriesStatic as useCategories } from "@/hooks/use-static-terms";
-import { PublicSidebar } from "@/components/public-sidebar";
-import { PublicHeader } from "@/components/public-header";
+import { Sidebar } from "@/components/sidebar";
+import { Header } from "@/components/header";
 import { TermsGrid } from "@/components/terms-grid";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
 import { Term } from "@/types";
@@ -42,13 +42,14 @@ export function PublicDashboard() {
 
   return (
     <div className="min-h-screen flex bg-secondary-50">
-      <PublicSidebar
+      <Sidebar
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
+        onAddTerm={() => {}} // No add functionality in public view
       />
 
       <main className="flex-1 flex flex-col w-full md:w-auto">
-        <PublicHeader
+        <Header
           selectedCategory={selectedCategory}
           totalTerms={terms.length}
           onSearch={handleSearch}
@@ -59,8 +60,7 @@ export function PublicDashboard() {
             terms={terms}
             isLoading={isLoading}
             onView={handleViewTerm}
-            onEdit={() => {}}
-            onDelete={() => {}}
+            isAdminMode={false}
           />
         </div>
       </main>

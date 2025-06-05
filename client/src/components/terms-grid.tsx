@@ -10,7 +10,7 @@ interface TermsGridProps {
   isAdminMode?: boolean;
 }
 
-export function TermsGrid({ terms, isLoading, onEdit, onDelete, onView }: TermsGridProps) {
+export function TermsGrid({ terms, isLoading, onEdit, onDelete, onView, isAdminMode = false }: TermsGridProps) {
   if (isLoading) {
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -68,6 +68,7 @@ export function TermsGrid({ terms, isLoading, onEdit, onDelete, onView }: TermsG
           onEdit={onEdit}
           onDelete={onDelete}
           onView={onView}
+          isAdminMode={isAdminMode}
         />
       ))}
     </div>

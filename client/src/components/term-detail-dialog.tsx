@@ -87,22 +87,11 @@ export function TermDetailDialog({
 
   // Sort terms alphabetically for navigation within current view
   const sortedTerms = allTerms.length > 0 ? [...allTerms].sort((a, b) => a.term.localeCompare(b.term)) : [];
-  const currentIndex = sortedTerms.findIndex(t => t.id === term.id);
+  
+  // Find current term index by term name (more reliable than ID)
+  const currentIndex = sortedTerms.findIndex(t => t.term === term.term);
   const previousTerm = currentIndex > 0 ? sortedTerms[currentIndex - 1] : null;
   const nextTerm = currentIndex >= 0 && currentIndex < sortedTerms.length - 1 ? sortedTerms[currentIndex + 1] : null;
-
-  // Debug navigation state
-  console.log('Navigation Debug:', {
-    termId: term.id,
-    termName: term.term,
-    allTermsCount: allTerms.length,
-    sortedTermsCount: sortedTerms.length,
-    currentIndex,
-    hasPrevious: !!previousTerm,
-    hasNext: !!nextTerm,
-    previousTerm: previousTerm?.term,
-    nextTerm: nextTerm?.term
-  });
 
   const handleRelatedTermClick = (relatedTermName: string) => {
     const relatedTerm = allTerms.find(t => t.term === relatedTermName);

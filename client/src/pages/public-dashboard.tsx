@@ -45,7 +45,7 @@ export function PublicDashboard() {
       <Sidebar
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
-        onAddTerm={() => {}} // No add functionality in public view
+        isAdminMode={false}
       />
 
       <main className="flex-1 flex flex-col w-full md:w-auto">

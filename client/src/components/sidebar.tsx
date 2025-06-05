@@ -1,5 +1,6 @@
 import { useAuth } from "@/hooks/use-auth";
 import { useCategories, useTerms } from "@/hooks/use-terms";
+import { useCategoriesStatic, useTermsStatic } from "@/hooks/use-static-terms";
 import { Button } from "@/components/ui/button";
 import { Brain, Plus, FolderOpen, List, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -13,11 +14,16 @@ interface SidebarProps {
 
 export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdminMode = false }: SidebarProps) {
   const { user, logout } = useAuth();
-  const { data: categories = [] } = useCategories();
-  const { data: allTerms = [] } = useTerms();
+  const { data: adminCategories = [] } = useCategories();
+  const { data: adminTerms = [] } = useTerms();
+  const { data: staticCategories = [] } = useCategoriesStatic();
+  const { data: staticTerms = [] } = useTermsStatic();
+  
+  const categories = isAdminMode ? adminCategories : staticCategories;
+  const allTerms = isAdminMode ? adminTerms : staticTerms;
 
   const getCategoryTermCount = (categoryName: string) => {
-    return allTerms.filter(term => term.category === categoryName).length;
+    return allTerms.filter((term: any) => term.category === categoryName).length;
   };
 
   return (
@@ -33,13 +39,15 @@ export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdmin
           </div>
         </div>
         
-        <Button
-          onClick={onAddTerm}
-          className="w-full bg-primary-500 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-primary-600 transition-colors"
-        >
-          <Plus className="w-4 h-4 mr-2" />
-          Add New Term
-        </Button>
+        {isAdminMode && onAddTerm && (
+          <Button
+            onClick={onAddTerm}
+            className="w-full bg-primary-500 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-primary-600 transition-colors"
+          >
+            <Plus className="w-4 h-4 mr-2" />
+            Add New Term
+          </Button>
+        )}
       </div>
       
       <div className="flex-1 overflow-y-auto">
@@ -64,7 +72,7 @@ export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdmin
               </span>
             </button>
             
-            {categories.map((category) => (
+            {categories.map((category: any) => (
               <button
                 key={category.id}
                 onClick={() => onCategoryChange(category.name)}

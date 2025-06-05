@@ -88,6 +88,7 @@ export function Dashboard() {
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
         onAddTerm={handleAddTerm}
+        isAdminMode={true}
       />
 
       <main className="flex-1 flex flex-col">

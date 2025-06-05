@@ -31,35 +31,16 @@ jobs:
     - name: Clean previous builds
       run: rm -rf dist
 
-    - name: Build application
+    - name: Build application for GitHub Pages
       run: npx vite build --config vite.config.pages.ts
 
-    - name: Prepare GitHub Pages deployment
-      run: |
-        # Copy built files to root for GitHub Pages
-        cp dist/index.html .
-        cp -r dist/assets .
-        
-        # Ensure data files are available at both root and dist
-        cp -r data .
-        cp -r data dist/
-        
-        # Create .nojekyll to prevent Jekyll processing
-        touch .nojekyll
+    - name: Copy data files to dist
+      run: cp -r data dist/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
+        publish_dir: dist
         force_orphan: true
-        exclude_assets: |
-          node_modules/**
-          server/**
-          client/src/**
-          .github/**
-          *.ts
-          *.json
-          !data/*.json
-          !package.json

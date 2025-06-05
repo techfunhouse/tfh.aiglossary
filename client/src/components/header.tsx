@@ -81,21 +81,15 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
           </div>
           
           {isAdminMode && user && (
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2 text-sm text-secondary-600">
-                <User className="w-4 h-4" />
-                <span>{user.username}</span>
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => logout()}
-                className="flex items-center space-x-2 text-secondary-700 hover:text-secondary-900 transition-colors"
-              >
-                <LogOut className="w-4 h-4" />
-                <span>Logout</span>
-              </Button>
-            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => logout()}
+              className="flex items-center space-x-2 text-secondary-700 hover:text-secondary-900 transition-colors"
+            >
+              <LogOut className="w-4 h-4" />
+              <span>Logout</span>
+            </Button>
           )}
 
         </div>

@@ -86,25 +86,47 @@ export function AddEditTermDialog({ open, onClose, editingTerm }: AddEditTermDia
       references: formatUrlsFromText(data.references || ""),
     };
 
-    const mutation = editingTerm ? updateTermMutation : createTermMutation;
-    const payload = editingTerm ? { ...termData, id: editingTerm.id } : termData;
-
-    mutation.mutate(payload as any, {
-      onSuccess: () => {
-        toast({
-          title: editingTerm ? "Term Updated" : "Term Created",
-          description: `${data.term} has been ${editingTerm ? "updated" : "created"} successfully.`,
-        });
-        onClose();
-      },
-      onError: (error: Error) => {
-        toast({
-          title: "Error",
-          description: error.message || `Failed to ${editingTerm ? "update" : "create"} term`,
-          variant: "destructive",
-        });
-      },
-    });
+    if (editingTerm) {
+      updateTermMutation.mutate(
+        { ...termData, id: editingTerm.id },
+        {
+          onSuccess: () => {
+            toast({
+              title: "Term Updated",
+              description: `${data.term} has been updated successfully.`,
+            });
+            onClose();
+          },
+          onError: (error: Error) => {
+            toast({
+              title: "Error",
+              description: error.message || "Failed to update term",
+              variant: "destructive",
+            });
+          },
+        }
+      );
+    } else {
+      createTermMutation.mutate(
+        termData,
+        {
+          onSuccess: () => {
+            toast({
+              title: "Term Created",
+              description: `${data.term} has been created successfully.`,
+            });
+            onClose();
+          },
+          onError: (error: Error) => {
+            toast({
+              title: "Error",
+              description: error.message || "Failed to create term",
+              variant: "destructive",
+            });
+          },
+        }
+      );
+    }
   };
 
   const isLoading = createTermMutation.isPending || updateTermMutation.isPending;

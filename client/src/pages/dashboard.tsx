@@ -6,6 +6,7 @@ import { Header } from "@/components/header";
 import { TermsGrid } from "@/components/terms-grid";
 import { AddEditTermDialog } from "@/components/add-edit-term-dialog";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
+import { ConfirmationDialog } from "@/components/confirmation-dialog";
 import { Term } from "@/types";
 
 export function Dashboard() {
@@ -13,8 +14,10 @@ export function Dashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isAddEditDialogOpen, setIsAddEditDialogOpen] = useState(false);
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
+  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [editingTerm, setEditingTerm] = useState<Term | null>(null);
   const [selectedTerm, setSelectedTerm] = useState<Term | null>(null);
+  const [termToDelete, setTermToDelete] = useState<Term | null>(null);
 
   const { data: terms = [], isLoading } = useTerms(
     selectedCategory === "all" ? undefined : selectedCategory,
@@ -44,23 +47,29 @@ export function Dashboard() {
   };
 
   const handleDeleteTerm = (term: Term) => {
-    if (window.confirm(`Are you sure you want to delete "${term.term}"?`)) {
-      deleteTermMutation.mutate(term.id, {
-        onSuccess: () => {
-          toast({
-            title: "Term Deleted",
-            description: `${term.term} has been deleted successfully.`,
-          });
-        },
-        onError: (error) => {
-          toast({
-            title: "Error",
-            description: error.message || "Failed to delete term",
-            variant: "destructive",
-          });
-        },
-      });
-    }
+    setTermToDelete(term);
+    setIsDeleteDialogOpen(true);
+  };
+
+  const confirmDeleteTerm = () => {
+    if (!termToDelete) return;
+    
+    deleteTermMutation.mutate(termToDelete.id, {
+      onSuccess: () => {
+        toast({
+          title: "Term Deleted",
+          description: `${termToDelete.term} has been deleted successfully.`,
+        });
+        setTermToDelete(null);
+      },
+      onError: (error) => {
+        toast({
+          title: "Error",
+          description: error.message || "Failed to delete term",
+          variant: "destructive",
+        });
+      },
+    });
   };
 
   const handleViewTerm = (term: Term) => {
@@ -125,6 +134,17 @@ export function Dashboard() {
         onDelete={handleDeleteTerm}
         allTerms={terms}
         onNavigateToTerm={handleNavigateToTerm}
+      />
+
+      <ConfirmationDialog
+        open={isDeleteDialogOpen}
+        onClose={() => setIsDeleteDialogOpen(false)}
+        onConfirm={confirmDeleteTerm}
+        title="Delete Term"
+        description={`Are you sure you want to delete "${termToDelete?.term}"? This action cannot be undone.`}
+        confirmText="Delete"
+        cancelText="Cancel"
+        variant="destructive"
       />
     </div>
   );

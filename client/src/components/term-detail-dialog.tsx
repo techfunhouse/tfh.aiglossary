@@ -91,6 +91,19 @@ export function TermDetailDialog({
   const previousTerm = currentIndex > 0 ? sortedTerms[currentIndex - 1] : null;
   const nextTerm = currentIndex >= 0 && currentIndex < sortedTerms.length - 1 ? sortedTerms[currentIndex + 1] : null;
 
+  // Debug navigation state
+  console.log('Navigation Debug:', {
+    termId: term.id,
+    termName: term.term,
+    allTermsCount: allTerms.length,
+    sortedTermsCount: sortedTerms.length,
+    currentIndex,
+    hasPrevious: !!previousTerm,
+    hasNext: !!nextTerm,
+    previousTerm: previousTerm?.term,
+    nextTerm: nextTerm?.term
+  });
+
   const handleRelatedTermClick = (relatedTermName: string) => {
     const relatedTerm = allTerms.find(t => t.term === relatedTermName);
     if (relatedTerm && onNavigateToTerm) {

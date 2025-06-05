@@ -1,17 +1,20 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
-
-import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Search, LogOut, User } from "lucide-react";
 import { debounce } from "@/lib/utils";
+import { useAuth } from "@/hooks/use-auth";
 
 interface HeaderProps {
   selectedCategory: string;
   totalTerms: number;
   onSearch: (query: string) => void;
+  isAdminMode?: boolean;
 }
 
-export function Header({ selectedCategory, totalTerms, onSearch }: HeaderProps) {
+export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = false }: HeaderProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const { user, logout } = useAuth();
 
   const debouncedSearch = useCallback(
     debounce((query: string) => {
@@ -62,6 +65,23 @@ export function Header({ selectedCategory, totalTerms, onSearch }: HeaderProps) 
             />
           </div>
           
+          {isAdminMode && user && (
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2 text-sm text-secondary-600">
+                <User className="w-4 h-4" />
+                <span>{user.username}</span>
+              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => logout()}
+                className="flex items-center space-x-2 text-secondary-700 hover:text-secondary-900 transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                <span>Logout</span>
+              </Button>
+            </div>
+          )}
 
         </div>
       </div>

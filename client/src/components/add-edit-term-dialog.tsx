@@ -97,7 +97,7 @@ export function AddEditTermDialog({ open, onClose, editingTerm }: AddEditTermDia
         });
         onClose();
       },
-      onError: (error) => {
+      onError: (error: Error) => {
         toast({
           title: "Error",
           description: error.message || `Failed to ${editingTerm ? "update" : "create"} term`,
@@ -113,19 +113,9 @@ export function AddEditTermDialog({ open, onClose, editingTerm }: AddEditTermDia
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <div className="flex items-center justify-between">
-            <DialogTitle className="text-xl font-bold text-secondary-900">
-              {editingTerm ? "Edit Term" : "Add New Term"}
-            </DialogTitle>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={onClose}
-              className="p-2 text-secondary-400 hover:text-secondary-600 rounded-lg hover:bg-secondary-100 transition-colors"
-            >
-              <X className="w-4 h-4" />
-            </Button>
-          </div>
+          <DialogTitle className="text-xl font-bold text-secondary-900">
+            {editingTerm ? "Edit Term" : "Add New Term"}
+          </DialogTitle>
         </DialogHeader>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

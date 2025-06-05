@@ -96,6 +96,7 @@ export function Dashboard() {
           selectedCategory={selectedCategory}
           totalTerms={terms.length}
           onSearch={handleSearch}
+          isAdminMode={true}
         />
 
         <div className="flex-1 overflow-y-auto px-8 py-6">

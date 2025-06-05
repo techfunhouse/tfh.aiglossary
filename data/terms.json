@@ -16865,23 +16865,5 @@
       "https://en.wikipedia.org/wiki/Digital_twin",
       "https://www.ibm.com/topics/what-is-a-digital-twin"
     ]
-  },
-  {
-    "term": "AAAA",
-    "category": "AI Fundamentals",
-    "definition": "AA",
-    "aliases": [
-      "AAA"
-    ],
-    "related": [
-      "Artificial General Intelligence",
-      "Machine Learning",
-      "Narrow AI"
-    ],
-    "tags": [
-      "core-concept",
-      "ai"
-    ],
-    "references": []
   }
 ]

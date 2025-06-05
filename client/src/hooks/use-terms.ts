@@ -2,9 +2,6 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { Term, CreateTermRequest, UpdateTermRequest, Category } from "@/types";
 
-// Check if we're in a static environment (GitHub Pages)
-const isStatic = typeof window !== 'undefined' && !window.location.origin.includes('localhost') && !window.location.origin.includes('replit');
-
 export function useTerms(category?: string, search?: string) {
   const queryKey = ["/api/terms"];
   if (category && category !== "all") {
@@ -17,49 +14,23 @@ export function useTerms(category?: string, search?: string) {
   return useQuery<Term[]>({
     queryKey,
     queryFn: async () => {
-      if (isStatic) {
-        // Load from static JSON file for GitHub Pages
-        const response = await fetch('/data/terms.json');
-        const allTerms = await response.json();
-        
-        let filteredTerms = allTerms;
-        
-        if (category && category !== "all") {
-          filteredTerms = filteredTerms.filter((term: Term) => term.category === category);
-        }
-        
-        if (search) {
-          const searchLower = search.toLowerCase();
-          filteredTerms = filteredTerms.filter((term: Term) =>
-            term.term.toLowerCase().includes(searchLower) ||
-            term.definition.toLowerCase().includes(searchLower) ||
-            term.category.toLowerCase().includes(searchLower) ||
-            (term.aliases && term.aliases.some(alias => alias.toLowerCase().includes(searchLower))) ||
-            (term.tags && term.tags.some(tag => tag.toLowerCase().includes(searchLower)))
-          );
-        }
-        
-        return filteredTerms;
-      } else {
-        // Use API for local/Replit development
-        const params = new URLSearchParams();
-        if (category && category !== "all") {
-          params.append("category", category);
-        }
-        if (search) {
-          params.append("search", search);
-        }
-        
-        const response = await fetch(`/api/terms?${params.toString()}`, {
-          credentials: "include",
-        });
-        
-        if (!response.ok) {
-          throw new Error("Failed to fetch terms");
-        }
-        
-        return response.json();
+      const params = new URLSearchParams();
+      if (category && category !== "all") {
+        params.append("category", category);
       }
+      if (search) {
+        params.append("search", search);
+      }
+      
+      const response = await fetch(`/api/terms?${params.toString()}`, {
+        credentials: "include",
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to fetch terms");
+      }
+      
+      return response.json();
     },
   });
 }
@@ -86,18 +57,11 @@ export function useCategories() {
   return useQuery<Category[]>({
     queryKey: ["/api/categories"],
     queryFn: async () => {
-      if (isStatic) {
-        // Load from static JSON file for GitHub Pages
-        const response = await fetch('/data/categories.json');
-        return response.json();
-      } else {
-        // Use API for local/Replit development
-        const response = await fetch("/api/categories");
-        if (!response.ok) {
-          throw new Error("Failed to fetch categories");
-        }
-        return response.json();
+      const response = await fetch("/api/categories");
+      if (!response.ok) {
+        throw new Error("Failed to fetch categories");
       }
+      return response.json();
     },
   });
 }

@@ -8,40 +8,33 @@ import { LoginPage } from "@/components/login-page";
 import { Dashboard } from "@/pages/dashboard";
 import { PublicDashboard } from "@/pages/public-dashboard";
 
-// Check if we're in a static environment (GitHub Pages)
-const isStatic = typeof window !== 'undefined' && !window.location.origin.includes('localhost') && !window.location.origin.includes('replit');
-
 function AppContent() {
   const { user, isLoading } = useAuth();
 
   return (
     <Switch>
-      {!isStatic && (
-        <>
-          <Route path="/login">
-            {isLoading ? (
-              <div className="min-h-screen flex items-center justify-center bg-secondary-50">
-                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
-              </div>
-            ) : user ? (
-              <Dashboard />
-            ) : (
-              <LoginPage />
-            )}
-          </Route>
-          <Route path="/admin">
-            {isLoading ? (
-              <div className="min-h-screen flex items-center justify-center bg-secondary-50">
-                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
-              </div>
-            ) : user ? (
-              <Dashboard />
-            ) : (
-              <LoginPage />
-            )}
-          </Route>
-        </>
-      )}
+      <Route path="/login">
+        {isLoading ? (
+          <div className="min-h-screen flex items-center justify-center bg-secondary-50">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+          </div>
+        ) : user ? (
+          <Dashboard />
+        ) : (
+          <LoginPage />
+        )}
+      </Route>
+      <Route path="/admin">
+        {isLoading ? (
+          <div className="min-h-screen flex items-center justify-center bg-secondary-50">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+          </div>
+        ) : user ? (
+          <Dashboard />
+        ) : (
+          <LoginPage />
+        )}
+      </Route>
       <Route>
         <PublicDashboard />
       </Route>

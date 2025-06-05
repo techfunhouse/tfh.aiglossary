@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTerms } from "@/hooks/use-terms";
+import { useTermsStatic as useTerms, useCategoriesStatic as useCategories } from "@/hooks/use-static-terms";
 import { PublicSidebar } from "@/components/public-sidebar";
 import { PublicHeader } from "@/components/public-header";
 import { PublicTermsGrid } from "@/components/public-terms-grid";

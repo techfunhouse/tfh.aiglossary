@@ -16865,5 +16865,29 @@
       "https://en.wikipedia.org/wiki/Digital_twin",
       "https://www.ibm.com/topics/what-is-a-digital-twin"
     ]
+  },
+  {
+    "term": "Edge-Deployed Agent",
+    "category": "AI Agents & Autonomy",
+    "definition": "An AI agent deployed at the edge of the network, close to data sources or users, enabling low-latency processing and reduced bandwidth usage.",
+    "aliases": [
+      "Edge Agent",
+      "Local Agent"
+    ],
+    "related": [
+      "edge-agent",
+      "edge-deployment",
+      "local-processing"
+    ],
+    "tags": [
+      "Edge Computing",
+      "Local Processing",
+      "Distributed Deployment",
+      "Low Latency"
+    ],
+    "references": [
+      "https://en.wikipedia.org/wiki/Edge_computing",
+      "https://www.nvidia.com/en-us/glossary/data-science/edge-ai/"
+    ]
   }
 ]

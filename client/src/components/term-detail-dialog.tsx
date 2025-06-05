@@ -85,11 +85,11 @@ export function TermDetailDialog({
     onDelete(term);
   };
 
-  // Sort all terms alphabetically for navigation
-  const sortedTerms = [...allTerms].sort((a, b) => a.term.localeCompare(b.term));
+  // Sort terms alphabetically for navigation within current view
+  const sortedTerms = allTerms.length > 0 ? [...allTerms].sort((a, b) => a.term.localeCompare(b.term)) : [];
   const currentIndex = sortedTerms.findIndex(t => t.id === term.id);
   const previousTerm = currentIndex > 0 ? sortedTerms[currentIndex - 1] : null;
-  const nextTerm = currentIndex < sortedTerms.length - 1 ? sortedTerms[currentIndex + 1] : null;
+  const nextTerm = currentIndex >= 0 && currentIndex < sortedTerms.length - 1 ? sortedTerms[currentIndex + 1] : null;
 
   const handleRelatedTermClick = (relatedTermName: string) => {
     const relatedTerm = allTerms.find(t => t.term === relatedTermName);

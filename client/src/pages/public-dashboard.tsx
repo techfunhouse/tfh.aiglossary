@@ -17,9 +17,6 @@ export function PublicDashboard() {
     selectedCategory === "all" ? undefined : selectedCategory,
     searchQuery || undefined
   );
-  
-  // Get all terms for navigation in dialog
-  const { data: allTerms = [] } = useTermsStatic();
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
@@ -80,7 +77,7 @@ export function PublicDashboard() {
         onEdit={() => {}} // No edit functionality in public view
         onDelete={() => {}} // No delete functionality in public view
         isPublicView={true}
-        allTerms={allTerms}
+        allTerms={terms}
         onNavigateToTerm={handleNavigateToTerm}
       />
     </div>

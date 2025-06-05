@@ -43,6 +43,8 @@ export function useAuth() {
     onSuccess: () => {
       queryClient.setQueryData(["/api/auth/me"], null);
       queryClient.clear();
+      // Redirect to public dashboard after logout
+      window.location.href = "/public";
     },
   });
 

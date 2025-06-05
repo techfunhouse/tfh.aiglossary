@@ -1,14 +1,10 @@
-name: Build and Deploy to GitHub Pages
+name: Force Deploy Mobile Updates
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  force-deploy:
     runs-on: ubuntu-latest
     
     permissions:
@@ -29,31 +25,30 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Clean previous builds
-      run: rm -rf dist
-
-    - name: Build application for GitHub Pages
-      run: npx vite build --config vite.config.pages.ts
-
-    - name: Copy data files to dist
-      run: cp -r data dist/
-
-    - name: Force cache refresh
+    - name: Clean and build
       run: |
-        # Clear any existing deployment
+        rm -rf dist
+        npx vite build --config vite.config.pages.ts
+
+    - name: Copy data and add cache busting
+      run: |
+        cp -r data dist/
+        # Add unique timestamp to force cache refresh
+        TIMESTAMP=$(date +%s)
+        sed -i "s/<\/head>/<!-- Cache-bust: $TIMESTAMP --><\/head>/" dist/index.html
+
+    - name: Delete existing gh-pages branch
+      run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # Add build timestamp to force browser cache refresh
-        echo "<!-- Force refresh: $(date +%s) -->" >> dist/index.html
-        
-    - name: Deploy to GitHub Pages
+        git push origin --delete gh-pages || echo "gh-pages branch doesn't exist"
+
+    - name: Deploy fresh content
       uses: peaceiris/actions-gh-pages@v4
-      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: dist
         force_orphan: true
         enable_jekyll: false
         cname: aiglossary.techfunhouse.com
-        commit_message: 'Deploy mobile responsive updates'
+        commit_message: 'Force deploy mobile responsive updates'

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useCategories, useTerms } from "@/hooks/use-terms";
+import { useCategoriesStatic as useCategories, useTermsStatic as useTerms } from "@/hooks/use-static-terms";
 import { Brain, FolderOpen, List, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";

@@ -94,26 +94,28 @@ export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdmin
         </div>
       </div>
       
-      <div className="p-6 border-t border-secondary-200">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-secondary-200 rounded-full flex items-center justify-center">
-            <User className="text-secondary-600 w-4 h-4" />
+      {isAdminMode && user && (
+        <div className="p-6 border-t border-secondary-200">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-secondary-200 rounded-full flex items-center justify-center">
+              <User className="text-secondary-600 w-4 h-4" />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-medium text-secondary-900">{user?.username}</p>
+              <p className="text-xs text-secondary-600">Administrator</p>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => logout()}
+              className="text-secondary-500 hover:text-secondary-700 transition-colors p-2"
+              title="Logout"
+            >
+              <LogOut className="w-4 h-4" />
+            </Button>
           </div>
-          <div className="flex-1">
-            <p className="text-sm font-medium text-secondary-900">{user?.username}</p>
-            <p className="text-xs text-secondary-600">Administrator</p>
-          </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => logout()}
-            className="text-secondary-500 hover:text-secondary-700 transition-colors p-2"
-            title="Logout"
-          >
-            <LogOut className="w-4 h-4" />
-          </Button>
         </div>
-      </div>
+      )}
     </aside>
   );
 }

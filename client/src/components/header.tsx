@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Search, Filter } from "lucide-react";
+
+import { Search } from "lucide-react";
 import { debounce } from "@/lib/utils";
 
 interface HeaderProps {
@@ -62,13 +62,7 @@ export function Header({ selectedCategory, totalTerms, onSearch }: HeaderProps) 
             />
           </div>
           
-          <Button
-            variant="outline"
-            className="px-4 py-2.5 border border-secondary-200 rounded-lg text-secondary-700 hover:bg-secondary-50 transition-colors"
-          >
-            <Filter className="w-4 h-4 mr-2" />
-            Filter
-          </Button>
+
         </div>
       </div>
     </header>

@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, LogOut, User, X, Brain } from "lucide-react";
+import { Search, LogOut, User, X } from "lucide-react";
 import { debounce } from "@/lib/utils";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -51,14 +51,9 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
   return (
     <header className="bg-white border-b border-secondary-200 px-4 md:px-8 py-6">
       <div className="flex items-center justify-between">
-        <div className="ml-12 md:ml-0 flex items-center space-x-3">
-          <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-            <Brain className="text-white w-4 h-4" />
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
-            <p className="text-secondary-600 mt-1">{getViewSubtitle()}</p>
-          </div>
+        <div className="ml-12 md:ml-0">
+          <h2 className="text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
+          <p className="text-secondary-600 mt-1">{getViewSubtitle()}</p>
         </div>
         
         {isAdminMode && user && (

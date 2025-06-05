@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCategoriesStatic, useTermsStatic } from "@/hooks/use-static-terms";
+import { useCategories, useTerms } from "@/hooks/use-terms";
 import { Button } from "@/components/ui/button";
 import { Brain, Plus, FolderOpen, List, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -13,8 +14,15 @@ interface SidebarProps {
 
 export function Sidebar({ selectedCategory, onCategoryChange, onAddTerm, isAdminMode = false }: SidebarProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const { data: categories = [] } = useCategoriesStatic();
-  const { data: allTerms = [] } = useTermsStatic();
+  
+  // Use appropriate data hooks based on admin mode
+  const { data: staticCategories = [] } = useCategoriesStatic();
+  const { data: staticTerms = [] } = useTermsStatic();
+  const { data: adminCategories = [] } = useCategories();
+  const { data: adminTerms = [] } = useTerms();
+  
+  const categories = isAdminMode ? adminCategories : staticCategories;
+  const allTerms = isAdminMode ? adminTerms : staticTerms;
 
   const getCategoryTermCount = (categoryName: string) => {
     return allTerms.filter((term: any) => term.category === categoryName).length;

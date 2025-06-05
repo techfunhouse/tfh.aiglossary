@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTermsStatic as useTerms, useCategoriesStatic as useCategories } from "@/hooks/use-static-terms";
 import { Sidebar } from "@/components/sidebar";
 import { Header } from "@/components/header";
+import { SearchBar } from "@/components/search-bar";
 import { TermsGrid } from "@/components/terms-grid";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
 import { Term } from "@/types";
@@ -55,7 +56,9 @@ export function PublicDashboard() {
           onSearch={handleSearch}
         />
 
-        <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 pt-16 md:pt-6">
+        <SearchBar onSearch={handleSearch} />
+
+        <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6">
           <TermsGrid
             terms={terms}
             isLoading={isLoading}

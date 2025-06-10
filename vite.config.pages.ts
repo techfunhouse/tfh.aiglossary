@@ -21,9 +21,8 @@ export default defineConfig({
     rollupOptions: {
       external: [],
     },
-    copyPublicDir: true,
+    copyPublicDir: false, // We'll manually copy what we need
   },
-  publicDir: path.resolve(__dirname, "data"),
   assetsInclude: ['**/*.json'],
   base: "/",
 });

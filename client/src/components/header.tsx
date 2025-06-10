@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Search, LogOut, User, X } from "lucide-react";
 import { debounce } from "@/lib/utils";
 import { useAuth } from "@/hooks/use-auth";
+import { SiLinkedin } from "react-icons/si";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+
 
 interface HeaderProps {
   selectedCategory: string;
@@ -55,6 +59,33 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
           <h2 className="text-2xl font-bold text-secondary-900">{getViewTitle()}</h2>
           <p className="text-secondary-600 mt-1">{getViewSubtitle()}</p>
         </div>
+        <div className="flex items-center space-x-4">
+          {/* Created by section */}
+          <a
+            href="https://linkedin.com/in/girivenkatesan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <img
+              src="/bygvensan.png"
+              alt="Created by Giri Venkatesan - LinkedIn"
+              className="h-8 w-auto rounded"
+            />
+          </a>
+
+          {/* Mobile version - just icon */}
+          <a
+            href="https://linkedin.com/in/girivenkatesan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:hidden flex items-center text-muted-foreground hover:text-primary transition-colors"
+            title="Created by Giri Venkatesan"
+          >
+            <SiLinkedin className="h-4 w-4" />
+          </a>
+        </div>
+
         
         {isAdminMode && user && (
           <Button

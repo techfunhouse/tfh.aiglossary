@@ -36,8 +36,10 @@ jobs:
       - name: Build for GitHub Pages
         run: npx vite build --config vite.config.pages.ts
         
-      - name: Copy logo to dist
-        run: cp client/public/bygvensan.png dist/
+      - name: Copy data and assets to dist
+        run: |
+          cp -r data dist/
+          cp client/public/bygvensan.png dist/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "beginner",
+    "name": "Beginner's Journey",
+    "description": "Start with AI fundamentals",
+    "icon": "GraduationCap",
+    "categories": ["AI Fundamentals", "Machine Learning Algorithms"]
+  },
+  {
+    "id": "intermediate",
+    "name": "Intermediate Concepts",
+    "description": "Deep dive into ML & DL",
+    "icon": "Target",
+    "categories": ["Deep Learning Architectures", "Natural Language Processing (NLP)", "Data Engineering for AI", "Prompt Engineering"]
+  },
+  {
+    "id": "advanced",
+    "name": "Advanced Topics",
+    "description": "Expert-level AI knowledge",
+    "icon": "Lightbulb",
+    "categories": ["Generative AI", "AI Agents & Autonomy", "Knowledge & Retrieval Systems", "Model Deployment & Operations"]
+  },
+  {
+    "id": "specialized",
+    "name": "Specialized Domains",
+    "description": "Industry-specific applications",
+    "icon": "BookOpen",
+    "categories": ["AI Infrastructure & Ecosystem", "Ethics & Governance", "Applied AI Domains"]
+  },
+  {
+    "id": "solace",
+    "name": "Solace Agent Mesh",
+    "description": "Event-driven AI agent systems",
+    "icon": "Brain",
+    "categories": ["AI Agents & Autonomy", "AI Infrastructure & Ecosystem", "Data Engineering for AI"]
+  }
+]

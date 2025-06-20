@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTerms, useDeleteTerm } from "@/hooks/use-terms";
+import { useTerms, useTermsByLearningPath, useDeleteTerm } from "@/hooks/use-terms";
 import { useToast } from "@/hooks/use-toast";
 import { Sidebar } from "@/components/sidebar";
 import { Header } from "@/components/header";
@@ -8,10 +8,12 @@ import { TermsGrid } from "@/components/terms-grid";
 import { AddEditTermDialog } from "@/components/add-edit-term-dialog";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
 import { ConfirmationDialog } from "@/components/confirmation-dialog";
+import { BackToTop } from "@/components/back-to-top";
 import { Term } from "@/types";
 
 export function Dashboard() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedLearningPath, setSelectedLearningPath] = useState<{ id: string; name: string; categories: string[] } | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isAddEditDialogOpen, setIsAddEditDialogOpen] = useState(false);
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
@@ -20,10 +22,20 @@ export function Dashboard() {
   const [selectedTerm, setSelectedTerm] = useState<Term | null>(null);
   const [termToDelete, setTermToDelete] = useState<Term | null>(null);
 
-  const { data: terms = [], isLoading } = useTerms(
-    selectedCategory === "all" ? undefined : selectedCategory,
+  // Use different hooks based on whether a learning path is selected
+  const { data: categoryTerms = [], isLoading: categoryLoading } = useTerms(
+    selectedLearningPath ? undefined : (selectedCategory === "all" ? undefined : selectedCategory),
     searchQuery || undefined
   );
+
+  const { data: learningPathTerms = [], isLoading: learningPathLoading } = useTermsByLearningPath(
+    selectedLearningPath,
+    searchQuery || undefined
+  );
+
+  // Use the appropriate data based on selection
+  const terms = selectedLearningPath ? learningPathTerms : categoryTerms;
+  const isLoading = selectedLearningPath ? learningPathLoading : categoryLoading;
   
   const deleteTermMutation = useDeleteTerm();
   const { toast } = useToast();
@@ -31,6 +43,11 @@ export function Dashboard() {
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
     setSearchQuery(""); // Clear search when changing category
+  };
+
+  const handleLearningPathChange = (learningPath: { id: string; name: string; categories: string[] } | null) => {
+    setSelectedLearningPath(learningPath);
+    setSearchQuery(""); // Clear search when changing learning path
   };
 
   const handleSearch = (query: string) => {
@@ -97,6 +114,7 @@ export function Dashboard() {
       <Sidebar
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
+        onLearningPathChange={handleLearningPathChange}
         onAddTerm={handleAddTerm}
         isAdminMode={true}
       />
@@ -106,6 +124,7 @@ export function Dashboard() {
           selectedCategory={selectedCategory}
           totalTerms={terms.length}
           onSearch={handleSearch}
+          selectedLearningPath={selectedLearningPath}
           isAdminMode={true}
         />
 
@@ -149,6 +168,8 @@ export function Dashboard() {
         cancelText="Cancel"
         variant="destructive"
       />
+
+      <BackToTop />
     </div>
   );
 }

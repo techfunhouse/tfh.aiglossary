@@ -1,0 +1,178 @@
+[
+  {
+    "term": "8-bit Precision",
+    "category": "Model Optimization",
+    "definition": "8-bit Precision refers to representing model parameters and activations using 8-bit integers to reduce memory usage and improve computational efficiency, typically through quantization.",
+    "aliases": [
+      "INT8 Precision",
+      "8-bit Quantization"
+    ],
+    "related": [
+      "Quantization",
+      "Mixed Precision",
+      "INT8 Quantization"
+    ],
+    "tags": [
+      "quantization",
+      "model-compression",
+      "efficiency"
+    ],
+    "references": [
+      "https://arxiv.org/abs/1712.05877",
+      "https://pytorch.org/docs/stable/quantization.html"
+    ]
+  },
+  {
+    "term": "A* Algorithm",
+    "category": "Search & Planning",
+    "definition": "A* Algorithm is a graph traversal and pathfinding technique that uses heuristics to find the most cost-effective path to a goal, combining the cost to reach a node and the estimated cost to the goal.",
+    "aliases": [
+      "A star"
+    ],
+    "related": [
+      "Heuristic Search",
+      "Dijkstra\u2019s Algorithm",
+      "Path Planning"
+    ],
+    "tags": [
+      "path-planning",
+      "heuristic-search",
+      "graph-algorithms"
+    ],
+    "references": [
+      "https://www.aaai.org/Papers/AAAI/1985/AAAI85-037.pdf",
+      "https://en.wikipedia.org/wiki/A*_search_algorithm"
+    ]
+  },
+  {
+    "term": "Abstractive Summarization",
+    "category": "Natural Language Processing",
+    "definition": "Abstractive Summarization is the process of generating concise summaries of text by creating new phrases and sentences that capture the core meaning, rather than extracting direct segments from the input.",
+    "aliases": [
+      "Generative Summarization"
+    ],
+    "related": [
+      "Extractive Summarization",
+      "Seq2Seq Models",
+      "Transformer"
+    ],
+    "tags": [
+      "summarization",
+      "seq2seq",
+      "transformers"
+    ],
+    "references": [
+      "https://arxiv.org/abs/1704.04368",
+      "https://en.wikipedia.org/wiki/Abstractive_summarization"
+    ]
+  },
+  {
+    "term": "Accuracy Improvement",
+    "category": "Model Evaluation",
+    "definition": "Accuracy Improvement refers to techniques used to enhance a model's predictive accuracy, such as tuning hyperparameters, using better features, or incorporating more data.",
+    "aliases": [
+      "Performance Boost"
+    ],
+    "related": [
+      "Model Evaluation",
+      "Hyperparameter Tuning",
+      "Ensembling"
+    ],
+    "tags": [
+      "metrics",
+      "training",
+      "evaluation"
+    ],
+    "references": [
+      "https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/",
+      "https://developers.google.com/machine-learning/crash-course/model-evaluation/accuracy"
+    ]
+  },
+  {
+    "term": "Acquisition Function",
+    "category": "Bayesian Optimization",
+    "definition": "An Acquisition Function is used in Bayesian Optimization to determine the next point to evaluate by balancing exploration and exploitation, helping efficiently optimize expensive functions.",
+    "aliases": [
+      "Utility Function"
+    ],
+    "related": [
+      "Bayesian Optimization",
+      "Gaussian Process",
+      "Expected Improvement"
+    ],
+    "tags": [
+      "bayesian-optimization",
+      "surrogate-models",
+      "gaussian-process"
+    ],
+    "references": [
+      "https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms",
+      "https://en.wikipedia.org/wiki/Acquisition_function"
+    ]
+  },
+  {
+    "term": "Action Planning",
+    "category": "Agent Systems",
+    "definition": "Action Planning involves determining a sequence of steps or actions an AI agent must take to achieve a specified goal, often using formal planning algorithms and representations.",
+    "aliases": [
+      "Plan Generation"
+    ],
+    "related": [
+      "Planning",
+      "Agent Actions",
+      "Hierarchical Planning"
+    ],
+    "tags": [
+      "planning",
+      "agent-intelligence",
+      "PDDL"
+    ],
+    "references": [
+      "https://web.stanford.edu/class/aa274/strips.pdf",
+      "https://en.wikipedia.org/wiki/Planning_(artificial_intelligence)"
+    ]
+  },
+  {
+    "term": "Action Sequence",
+    "category": "Agent Systems",
+    "definition": "An Action Sequence is an ordered set of actions that an AI agent plans and executes to reach its goal, derived through policy or planning strategies.",
+    "aliases": [
+      "Plan Sequence"
+    ],
+    "related": [
+      "Agent Actions",
+      "Action Planning",
+      "Policy"
+    ],
+    "tags": [
+      "agent-planning",
+      "sequential-decisions"
+    ],
+    "references": [
+      "https://link.springer.com/book/10.1007/978-3-319-17803-9",
+      "https://en.wikipedia.org/wiki/Plan_(artificial_intelligence)"
+    ]
+  },
+  {
+    "term": "Active Learning",
+    "category": "Machine Learning",
+    "definition": "Active Learning is a machine learning approach where the algorithm selectively queries an oracle (like a human annotator) to label data points that are expected to provide the most useful learning.",
+    "aliases": [
+      "Query Learning"
+    ],
+    "related": [
+      "Semi-supervised Learning",
+      "Oracle",
+      "Uncertainty Sampling"
+    ],
+    "tags": [
+      "data-efficiency",
+      "semi-supervised",
+      "oracle"
+    ],
+    "references": [
+      "https://www.cs.cornell.edu/people/tj/publications/joachims_icalp99active.pdf",
+      "https://en.wikipedia.org/wiki/Active_learning_(machine_learning)"
+    ]
+  }
+]

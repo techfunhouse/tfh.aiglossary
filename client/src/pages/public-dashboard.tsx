@@ -1,26 +1,50 @@
-import { useState } from "react";
-import { useTermsStatic, useCategoriesStatic } from "@/hooks/use-static-terms";
+import { useState, useRef } from "react";
+import { useTermsStatic, useTermsStaticByLearningPath, useCategoriesStatic } from "@/hooks/use-static-terms";
 import { Sidebar } from "@/components/sidebar";
 import { Header } from "@/components/header";
 import { SearchBar } from "@/components/search-bar";
 import { TermsGrid } from "@/components/terms-grid";
 import { TermDetailDialog } from "@/components/term-detail-dialog";
+import { BackToTop } from "@/components/back-to-top";
 import { Term } from "@/types";
 
 export function PublicDashboard() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedLearningPath, setSelectedLearningPath] = useState<{ id: string; name: string; categories: string[] } | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
   const [selectedTerm, setSelectedTerm] = useState<Term | null>(null);
+  const contentAreaRef = useRef<HTMLDivElement>(null);
 
-  const { data: terms = [], isLoading } = useTermsStatic(
-    selectedCategory === "all" ? undefined : selectedCategory,
+  // Use different hooks based on whether a learning path is selected
+  const { data: categoryTerms = [], isLoading: categoryLoading } = useTermsStatic(
+    selectedLearningPath ? undefined : (selectedCategory === "all" ? undefined : selectedCategory),
     searchQuery || undefined
   );
+
+  const { data: learningPathTerms = [], isLoading: learningPathLoading } = useTermsStaticByLearningPath(
+    selectedLearningPath,
+    searchQuery || undefined
+  );
+
+  // Use the appropriate data based on selection
+  const terms = selectedLearningPath ? learningPathTerms : categoryTerms;
+  const isLoading = selectedLearningPath ? learningPathLoading : categoryLoading;
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
     setSearchQuery(""); // Clear search when changing category
+    if (contentAreaRef.current) {
+      contentAreaRef.current.scrollTop = 0;
+    }
+  };
+
+  const handleLearningPathChange = (learningPath: { id: string; name: string; categories: string[] } | null) => {
+    setSelectedLearningPath(learningPath);
+    setSearchQuery(""); // Clear search when changing learning path
+    if (contentAreaRef.current) {
+      contentAreaRef.current.scrollTop = 0;
+    }
   };
 
   const handleSearch = (query: string) => {
@@ -48,6 +72,7 @@ export function PublicDashboard() {
       <Sidebar
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
+        onLearningPathChange={handleLearningPathChange}
         isAdminMode={false}
       />
 
@@ -56,11 +81,12 @@ export function PublicDashboard() {
           selectedCategory={selectedCategory}
           totalTerms={terms.length}
           onSearch={handleSearch}
+          selectedLearningPath={selectedLearningPath}
         />
 
         <SearchBar onSearch={handleSearch} />
 
-        <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6">
+        <div ref={contentAreaRef} className="flex-1 overflow-y-auto px-4 md:px-8 py-6">
           <TermsGrid
             terms={terms}
             isLoading={isLoading}
@@ -80,6 +106,8 @@ export function PublicDashboard() {
         allTerms={terms}
         onNavigateToTerm={handleNavigateToTerm}
       />
+
+      <BackToTop />
     </div>
   );
 }

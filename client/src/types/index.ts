@@ -18,6 +18,7 @@ export interface Term {
   related?: string[] | null;
   tags?: string[] | null;
   references?: string[] | null;
+  learningpaths?: { [key: string]: number } | null;
 }
 
 export interface CreateTermRequest {

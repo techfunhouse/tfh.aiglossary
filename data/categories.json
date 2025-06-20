@@ -1,54 +1,67 @@
 [
   {
     "name": "AI Fundamentals",
-    "description": "Core concepts and terminology that form the foundation of artificial intelligence, including types of AI, general definitions, and historical context."
+    "description": "Core concepts and terminology that form the foundation of artificial intelligence, including types of AI, general definitions, and historical context.",
+    "icon": "Layers"
   },
   {
     "name": "Machine Learning Algorithms",
-    "description": "Traditional machine learning techniques such as classification, regression, clustering, and reinforcement learning — typically involving structured data and statistical models."
+    "description": "Traditional machine learning techniques such as classification, regression, clustering, and reinforcement learning — typically involving structured data and statistical models.",
+    "icon": "Cog"
   },
   {
     "name": "Deep Learning Architectures",
-    "description": "Neural network-based models with multiple layers, designed to process complex patterns in high-dimensional data like images, audio, and text."
+    "description": "Neural network-based models with multiple layers, designed to process complex patterns in high-dimensional data like images, audio, and text.",
+    "icon": "Network"
   },
   {
     "name": "Prompt Engineering",
-    "description": "Techniques for designing and optimizing input prompts to guide large language models (LLMs) and other generative AI systems in producing desired outputs."    
+    "description": "Techniques for designing and optimizing input prompts to guide large language models (LLMs) and other generative AI systems in producing desired outputs.",
+    "icon": "PenTool"
   },
   {
     "name": "Natural Language Processing (NLP)",
-    "description": "Techniques and models focused on understanding, processing, and generating human language — including tasks like tokenization, summarization, and translation."
+    "description": "Techniques and models focused on understanding, processing, and generating human language — including tasks like tokenization, summarization, and translation.",
+    "icon": "MessageSquare"
   },
   {
     "name": "Generative AI",
-    "description": "Models and techniques that generate content — such as text, images, or code — using foundational models like LLMs and diffusion models, often through prompt-driven interaction."
+    "description": "Models and techniques that generate content — such as text, images, or code — using foundational models like LLMs and diffusion models, often through prompt-driven interaction.",
+    "icon": "Sparkles"
   },
   {
     "name": "AI Agents & Autonomy",
-    "description": "Autonomous systems capable of decision-making, interacting with tools or environments, and performing complex workflows with minimal human input."
+    "description": "Autonomous systems capable of decision-making, interacting with tools or environments, and performing complex workflows with minimal human input.",
+    "icon": "Bot"
   },
   {
     "name": "Knowledge & Retrieval Systems",
-    "description": "Structures and techniques for representing, retrieving, and reasoning over information — including knowledge graphs, vector search, and RAG (retrieval-augmented generation)."
+    "description": "Structures and techniques for representing, retrieving, and reasoning over information — including knowledge graphs, vector search, and RAG (retrieval-augmented generation).",
+    "icon": "Database"
   },
   {
     "name": "Data Engineering for AI",
-    "description": "Processes and practices involved in preparing, enriching, and managing data for AI workloads — including labeling, feature extraction, and real-time transformations."
+    "description": "Processes and practices involved in preparing, enriching, and managing data for AI workloads — including labeling, feature extraction, and real-time transformations.",
+    "icon": "DatabaseZap"
   },
   {
     "name": "Model Deployment & Operations",
-    "description": "Techniques and tools for putting models into production, monitoring their performance, handling drift, scaling inference, and maintaining reliable AI services (MLOps, LLMOps)."
+    "description": "Techniques and tools for putting models into production, monitoring their performance, handling drift, scaling inference, and maintaining reliable AI services (MLOps, LLMOps).",
+    "icon": "Server"
   },
   {
     "name": "AI Infrastructure & Ecosystem",
-    "description": "The tools, frameworks, platforms, and systems that support building and running AI applications — including APIs, SDKs, orchestration layers, and cloud services."
+    "description": "The tools, frameworks, platforms, and systems that support building and running AI applications — including APIs, SDKs, orchestration layers, and cloud services.",
+    "icon": "Cloud"
   },
   {
     "name": "Ethics & Governance",
-    "description": "Concerns and principles related to fairness, accountability, explainability, bias mitigation, compliance with regulations, and responsible AI development."
+    "description": "Concerns and principles related to fairness, accountability, explainability, bias mitigation, compliance with regulations, and responsible AI development.",
+    "icon": "ShieldCheck"
   },
   {
     "name": "Applied AI Domains",
-    "description": "Use-case-specific applications of AI across industries such as healthcare, finance, manufacturing, and logistics — including domain terms and sector-specific techniques."
+    "description": "Use-case-specific applications of AI across industries such as healthcare, finance, manufacturing, and logistics — including domain terms and sector-specific techniques.",
+    "icon": "Briefcase"
   }
 ]

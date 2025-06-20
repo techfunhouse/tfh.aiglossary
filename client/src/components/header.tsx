@@ -13,10 +13,11 @@ interface HeaderProps {
   selectedCategory: string;
   totalTerms: number;
   onSearch: (query: string) => void;
+  selectedLearningPath?: { id: string; name: string; categories: string[] } | null;
   isAdminMode?: boolean;
 }
 
-export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = false }: HeaderProps) {
+export function Header({ selectedCategory, totalTerms, onSearch, selectedLearningPath, isAdminMode = false }: HeaderProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const { user, logout } = useAuth();
 
@@ -39,6 +40,9 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
   };
 
   const getViewTitle = () => {
+    if (selectedLearningPath) {
+      return selectedLearningPath.name;
+    }
     if (selectedCategory === "all") {
       return "All Categories";
     }
@@ -46,6 +50,9 @@ export function Header({ selectedCategory, totalTerms, onSearch, isAdminMode = f
   };
 
   const getViewSubtitle = () => {
+    if (selectedLearningPath) {
+      return `Showing ${totalTerms} terms across ${selectedLearningPath.categories.length} categories`;
+    }
     if (selectedCategory === "all") {
       return `Showing all ${totalTerms} terms across 12 categories`;
     }

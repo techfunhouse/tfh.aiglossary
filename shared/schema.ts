@@ -53,11 +53,15 @@ export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
 export type InsertCategory = z.infer<typeof insertCategorySchema>;
-export type Category = typeof categories.$inferSelect;
+export type Category = typeof categories.$inferSelect & {
+  icon?: string;
+};
 
 export type InsertTerm = z.infer<typeof insertTermSchema>;
 export type UpdateTerm = z.infer<typeof updateTermSchema>;
-export type Term = typeof terms.$inferSelect;
+export type Term = typeof terms.$inferSelect & {
+  learningpaths?: { [key: string]: number } | null;
+};
 
 // Login schema
 export const loginSchema = z.object({
